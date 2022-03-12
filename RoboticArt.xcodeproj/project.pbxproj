@@ -11,6 +11,7 @@
 		5070016C27D8269F008ACB9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070016B27D8269F008ACB9C /* ContentView.swift */; };
 		5070016E27D826A0008ACB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5070016D27D826A0008ACB9C /* Assets.xcassets */; };
 		5070017127D826A0008ACB9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5070017027D826A0008ACB9C /* Preview Assets.xcassets */; };
+		5070017A27D829C2008ACB9C /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 5070017927D829C2008ACB9C /* ORSSerial */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5070017A27D829C2008ACB9C /* ORSSerial in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = RoboticArt;
+			packageProductDependencies = (
+				5070017927D829C2008ACB9C /* ORSSerial */,
+			);
 			productName = RoboticArt;
 			productReference = 5070016627D8269F008ACB9C /* RoboticArt.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 5070015D27D8269F008ACB9C;
+			packageReferences = (
+				5070017827D829C2008ACB9C /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
+			);
 			productRefGroup = 5070016727D8269F008ACB9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -338,6 +346,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5070017827D829C2008ACB9C /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/armadsen/ORSSerialPort";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5070017927D829C2008ACB9C /* ORSSerial */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5070017827D829C2008ACB9C /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
+			productName = ORSSerial;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5070015E27D8269F008ACB9C /* Project object */;
 }
