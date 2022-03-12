@@ -23,6 +23,9 @@
 		50C3616727DD1A4A00E42B29 /* MIDIModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3616627DD1A4A00E42B29 /* MIDIModeView.swift */; };
 		50C3616927DD1D9E00E42B29 /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3616827DD1D9E00E42B29 /* ModeView.swift */; };
 		50C3616B27DD277A00E42B29 /* PianoKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3616A27DD277A00E42B29 /* PianoKeyView.swift */; };
+		50C3616E27DD295400E42B29 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3616D27DD295400E42B29 /* View.swift */; };
+		50C3617027DD2BB800E42B29 /* NoteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3616F27DD2BB800E42B29 /* NoteType.swift */; };
+		50C3617227DD2ED300E42B29 /* PianoOctaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617127DD2ED300E42B29 /* PianoOctaveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		50C3616627DD1A4A00E42B29 /* MIDIModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIModeView.swift; sourceTree = "<group>"; };
 		50C3616827DD1D9E00E42B29 /* ModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeView.swift; sourceTree = "<group>"; };
 		50C3616A27DD277A00E42B29 /* PianoKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoKeyView.swift; sourceTree = "<group>"; };
+		50C3616D27DD295400E42B29 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		50C3616F27DD2BB800E42B29 /* NoteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteType.swift; sourceTree = "<group>"; };
+		50C3617127DD2ED300E42B29 /* PianoOctaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoOctaveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				5070016927D8269F008ACB9C /* RoboticArtApp.swift */,
+				50C3616C27DD294600E42B29 /* Extensions */,
 				50C3615C27DD17BB00E42B29 /* Models */,
 				50C3615727DCFDB300E42B29 /* Helper Views */,
 				50C3615427DCE99A00E42B29 /* ViewModel */,
@@ -108,8 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				50C3615827DCFDC400E42B29 /* CirclePulseButton.swift */,
-				5070016B27D8269F008ACB9C /* PianoView.swift */,
 				50C3616827DD1D9E00E42B29 /* ModeView.swift */,
+				5070016B27D8269F008ACB9C /* PianoView.swift */,
+				50C3617127DD2ED300E42B29 /* PianoOctaveView.swift */,
 				50C3616A27DD277A00E42B29 /* PianoKeyView.swift */,
 			);
 			path = "Helper Views";
@@ -119,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				50C3615D27DD17C600E42B29 /* CurrentView.swift */,
+				50C3616F27DD2BB800E42B29 /* NoteType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,6 +143,14 @@
 				50C3616627DD1A4A00E42B29 /* MIDIModeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		50C3616C27DD294600E42B29 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				50C3616D27DD295400E42B29 /* View.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C3617027DD2BB800E42B29 /* NoteType.swift in Sources */,
 				50C3615B27DD17A800E42B29 /* SplashScreenView.swift in Sources */,
 				50C3616127DD196700E42B29 /* InformationView.swift in Sources */,
 				50C3615927DCFDC400E42B29 /* CirclePulseButton.swift in Sources */,
+				50C3617227DD2ED300E42B29 /* PianoOctaveView.swift in Sources */,
 				50C3616727DD1A4A00E42B29 /* MIDIModeView.swift in Sources */,
 				50C3616527DD19B900E42B29 /* MachineVisionModeView.swift in Sources */,
 				50C3616927DD1D9E00E42B29 /* ModeView.swift in Sources */,
@@ -224,6 +243,7 @@
 				5070016A27D8269F008ACB9C /* RoboticArtApp.swift in Sources */,
 				50C3615E27DD17C600E42B29 /* CurrentView.swift in Sources */,
 				50C3616B27DD277A00E42B29 /* PianoKeyView.swift in Sources */,
+				50C3616E27DD295400E42B29 /* View.swift in Sources */,
 				50C3616327DD199A00E42B29 /* ChooseModeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

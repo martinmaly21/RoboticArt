@@ -10,25 +10,36 @@ import SwiftUI
 struct PianoView: View {
     @StateObject var serialPortViewModel = SerialPortViewModel()
     
+    private var notes: [NoteType] = NoteType.allCases
+    
     var body: some View {
-        HStack {
+        VStack {
             HStack {
-                ForEach(
-                    Range(0...7),
-                    content: { _ in
-                        PianoKeyView()
-                    }
+                Text("🎵 Play some tunes! 🎵")
+                    .font(.system(size: 60))
+                    .bold()
+//                    .padding(.top, 190)
+                
+                Spacer()
+            }
+            .padding(.bottom, 150)
+            
+            HStack(spacing: 100) {
+                PianoOctaveView(
+                    octaveName: "Octave 1",
+                    notes: Array(notes.prefix(notes.count / 2))
+                )
+
+                PianoOctaveView(
+                    octaveName: "Octave 2",
+                    notes: Array(notes.suffix(notes.count / 2))
                 )
             }
-            HStack {
-                ForEach(
-                    Range(0...7),
-                    content: { _ in
-                        PianoKeyView()
-                    }
-                )
-            }
+            .background(Color.gray.opacity(0.3))
+            .cornerRadius(30)
         }
+        .padding()
+        .cornerRadius(8)
     }
 }
 

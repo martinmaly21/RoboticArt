@@ -21,19 +21,23 @@ struct ChooseModeView: View {
                 HStack {
                     ModeView(modeTitle: "Computer Vision", modeImage: nil)
                         .onTapGesture {
-                            currentView = .machineVisionMode
+                            withAnimation {
+                                currentView = .machineVisionMode
+                            }
                         }
                     
                     ModeView(modeTitle: "MIDI", modeImage: nil)
                         .onTapGesture {
-                            currentView = .midiMode
+                            withAnimation {
+                                currentView = .midiMode
+                            }
                         }
                 }
                 
                 Spacer()
                     .frame(height: 100)
             }
-    
+            
         }
         .padding(.top, 300)
         
