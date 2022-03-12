@@ -53,17 +53,10 @@ void playPianoKeys() {
     if (newData == true) {
         //convert array of characters into integer
         int receivedIntegerValue = atoi(receivedChars);
-
-        //TODO: send correct values to shift register
-        if (receivedIntegerValue == 69) {
-          digitalWrite(latchPin, LOW);  
-          shiftOut(dataPin, clockPin, MSBFIRST, 1);
-          digitalWrite(latchPin, HIGH);
-        } else if (receivedIntegerValue == 10) {
-          digitalWrite(latchPin, LOW);  
-          shiftOut(dataPin, clockPin, MSBFIRST, 0);
-          digitalWrite(latchPin, HIGH);
-        }
+        
+        digitalWrite(latchPin, LOW);  
+        shiftOut(dataPin, clockPin, MSBFIRST, receivedIntegerValue);
+        digitalWrite(latchPin, HIGH);
         
         newData = false;
     }
