@@ -1,5 +1,5 @@
 //
-//  PianoKeyView.swift
+//  WhitePianoKeyView.swift
 //  RoboticArt
 //
 //  Created by Martin Maly on 2022-03-12.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PianoKeyView: View {
+struct WhitePianoKeyView: View {
     let noteType: NoteType
     let keyHeight: CGFloat = 450
     
@@ -44,6 +44,6 @@ struct PianoKeyView: View {
 
 struct PianoKeyView_Previews: PreviewProvider {
     static var previews: some View {
-        PianoKeyView(noteType: .a1)
+        WhitePianoKeyView(noteType: .a1)
     }
 }

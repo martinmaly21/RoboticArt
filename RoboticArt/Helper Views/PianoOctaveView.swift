@@ -12,20 +12,36 @@ struct PianoOctaveView: View {
     let notes: [NoteType]
     
     var body: some View {
-        
-        VStack {
-            Text(octaveName)
-                .font(.system(size: 40))
-                .bold()
-            
-            HStack(spacing: 5) {
-                ForEach(
-                    notes,
-                    id: \.self,
-                    content: { note in
-                        PianoKeyView(noteType: note)
+        GeometryReader { geo in
+            VStack(alignment: .leading) {
+                Text(octaveName)
+                    .font(.system(size: 40))
+                    .bold()
+                ZStack(alignment: .top) {
+                    HStack(spacing: 5) {
+                        ForEach(
+                            notes,
+                            id: \.self,
+                            content: { note in
+                                WhitePianoKeyView(noteType: note)
+                            }
+                        )
                     }
-                )
+                    
+                    //sharps and flats
+                    HStack {
+                        
+                        BlackPianoKeyView()
+                        
+                        BlackPianoKeyView()
+                        
+                        BlackPianoKeyView()
+                        
+                        BlackPianoKeyView()
+                        
+                        BlackPianoKeyView()
+                    }
+                }
             }
         }
     }
