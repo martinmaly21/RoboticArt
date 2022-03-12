@@ -44,4 +44,27 @@ enum NoteType: String, CaseIterable {
             return "B"
         }
     }
+    
+    var binaryNote: String {
+        switch self {
+        case .c1:
+            return "1"
+        case .d1:
+            return "2"
+        case .e1:
+            return "4"
+        case .f1:
+            return "8"
+        case .g1:
+            return "16"
+        case .a1:
+            return "32"
+        case .b1:
+            return "64"
+        case .c2:
+            return "128"
+        default:
+            fatalError("Note yet implemented")
+        }
+    }
 }

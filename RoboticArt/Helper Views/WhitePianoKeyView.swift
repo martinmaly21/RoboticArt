@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WhitePianoKeyView: View {
+    @EnvironmentObject var serialPortViewModel: SerialPortViewModel
+
     let noteType: NoteType
     let keyHeight: CGFloat
     let keyWidth: CGFloat
@@ -37,7 +39,7 @@ struct WhitePianoKeyView: View {
         }
         .frame(width: keyWidth, height: keyHeight)
         .onTapGesture {
-            //TODO
+            serialPortViewModel.sendData(noteType.binaryNote)
         }
     }
 }
