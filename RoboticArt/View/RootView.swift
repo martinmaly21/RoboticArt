@@ -14,7 +14,7 @@ struct RootView: View {
         VStack(alignment: .center) {
             switch currentView {
             case .splashScreen:
-                SplashScreen(currentView: $currentView)
+                SplashScreenView(currentView: $currentView)
             case .information:
                 Text("TODO: information")
             case .chooseMode:
