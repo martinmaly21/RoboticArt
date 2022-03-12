@@ -1,5 +1,5 @@
 //
-//  OnboardingView.swift
+//  RootView.swift
 //  RoboticArt
 //
 //  Created by Martin Maly on 2022-03-12.
@@ -7,7 +7,7 @@
 
 import SwiftUI
  
-struct OnboardingView: View {
+struct RootView: View {
     @State private var currentView: CurrentView = .splashScreen
     
     var body: some View {

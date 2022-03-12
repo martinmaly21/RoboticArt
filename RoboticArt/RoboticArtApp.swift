@@ -12,7 +12,7 @@ import ORSSerial
 struct RoboticArtApp: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            RootView()
                 .onAppear {
                     DispatchQueue.main.asyncAfter(
                         deadline: .now() + 0.3,
