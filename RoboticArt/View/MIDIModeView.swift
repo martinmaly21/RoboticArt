@@ -9,8 +9,26 @@ import SwiftUI
 
 struct MIDIModeView: View {
     @Binding var currentView: CurrentView
+    @StateObject var serialPortViewModel = SerialPortViewModel()
+    @State var messageText: String = ""
     
     var body: some View {
-        PianoView()
+        VStack {
+            TextField(
+                    "Data to send arduino",
+                    text: $messageText
+                )
+            
+            Button(
+                action: {
+                    serialPortViewModel.sendData(messageText)
+                },
+                label: {
+                    
+                    Text("Send!")
+                }
+            )
+        }
+        .padding()
     }
 }

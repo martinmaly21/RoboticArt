@@ -22,6 +22,7 @@
 		50C3616527DD19B900E42B29 /* MachineVisionModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3616427DD19B900E42B29 /* MachineVisionModeView.swift */; };
 		50C3616727DD1A4A00E42B29 /* MIDIModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3616627DD1A4A00E42B29 /* MIDIModeView.swift */; };
 		50C3616927DD1D9E00E42B29 /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3616827DD1D9E00E42B29 /* ModeView.swift */; };
+		50C3616B27DD277A00E42B29 /* PianoKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3616A27DD277A00E42B29 /* PianoKeyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		50C3616427DD19B900E42B29 /* MachineVisionModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineVisionModeView.swift; sourceTree = "<group>"; };
 		50C3616627DD1A4A00E42B29 /* MIDIModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIModeView.swift; sourceTree = "<group>"; };
 		50C3616827DD1D9E00E42B29 /* ModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeView.swift; sourceTree = "<group>"; };
+		50C3616A27DD277A00E42B29 /* PianoKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoKeyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				50C3615827DCFDC400E42B29 /* CirclePulseButton.swift */,
 				5070016B27D8269F008ACB9C /* PianoView.swift */,
 				50C3616827DD1D9E00E42B29 /* ModeView.swift */,
+				50C3616A27DD277A00E42B29 /* PianoKeyView.swift */,
 			);
 			path = "Helper Views";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				50C3615327DCE99300E42B29 /* SerialPortViewModel.swift in Sources */,
 				5070016A27D8269F008ACB9C /* RoboticArtApp.swift in Sources */,
 				50C3615E27DD17C600E42B29 /* CurrentView.swift in Sources */,
+				50C3616B27DD277A00E42B29 /* PianoKeyView.swift in Sources */,
 				50C3616327DD199A00E42B29 /* ChooseModeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

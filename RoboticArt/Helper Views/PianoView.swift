@@ -10,26 +10,25 @@ import SwiftUI
 struct PianoView: View {
     @StateObject var serialPortViewModel = SerialPortViewModel()
     
-    @State var messageText: String = ""
-    
     var body: some View {
-        VStack {
-            TextField(
-                    "Data to send arduino",
-                    text: $messageText
+        HStack {
+            HStack {
+                ForEach(
+                    Range(0...7),
+                    content: { _ in
+                        PianoKeyView()
+                    }
                 )
-            
-            Button(
-                action: {
-                    serialPortViewModel.sendData(messageText)
-                },
-                label: {
-                    
-                    Text("Send!")
-                }
-            )
+            }
+            HStack {
+                ForEach(
+                    Range(0...7),
+                    content: { _ in
+                        PianoKeyView()
+                    }
+                )
+            }
         }
-        .padding()
     }
 }
 
