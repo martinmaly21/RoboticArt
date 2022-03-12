@@ -35,6 +35,7 @@ struct PianoView: View {
                     notes: Array(notes.suffix(notes.count / 2))
                 )
             }
+            .padding()
             .background(Color.gray.opacity(0.3))
             .cornerRadius(30)
         }

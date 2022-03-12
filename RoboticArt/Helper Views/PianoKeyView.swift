@@ -20,19 +20,24 @@ struct PianoKeyView: View {
             Rectangle()
                 .background(Color.white)
                 .roundedCorners(radius: 20, corners: [.bottomLeft, .bottomRight])
-                .frame(width: keyWidth, height: keyHeight)
-            
-            ZStack {
-                Circle()
-                    .fill(Color.black.opacity(0.6))
-                    .frame(width: keyWidth / 1.5)
                 
-                Text(noteType.parsedNote)
-                    .font(.system(size: 20))
-                    .bold()
+            VStack {
+                Spacer()
+                
+                ZStack {
+                    Circle()
+                        .fill(Color.black.opacity(0.6))
+                        .frame(width: keyWidth / 1.5)
+                        
+                    Text(noteType.parsedNote)
+                        .font(.system(size: 20))
+                        .bold()
+                }
+                .frame(width: keyWidth / 1.5, height: keyWidth / 1.5)
             }
-            
+            .padding(.bottom, 25)
         }
+        .frame(width: keyWidth, height: keyHeight)
     }
 }
 
