@@ -12,8 +12,7 @@ import ORSSerial
 struct RoboticArtApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            OnboardingView()
                 .onAppear {
                     DispatchQueue.main.asyncAfter(
                         deadline: .now() + 0.3,

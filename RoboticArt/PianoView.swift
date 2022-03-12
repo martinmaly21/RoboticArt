@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PianoView.swift
 //  RoboticArt
 //
 //  Created by Martin Maly on 2022-03-08.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PianoView: View {
     @StateObject var serialPortViewModel = SerialPortViewModel()
     
     @State var messageText: String = ""
@@ -35,6 +35,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        PianoView()
     }
 }
