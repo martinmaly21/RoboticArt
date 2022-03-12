@@ -14,15 +14,10 @@ struct PianoView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("🎵 Play some tunes! 🎵")
-                    .font(.system(size: 60))
-                    .bold()
-//                    .padding(.top, 190)
-                
-                Spacer()
-            }
-            .padding(.bottom, 150)
+            Text("🎵 Play some tunes! 🎵")
+                .font(.system(size: 60))
+                .bold()
+                .padding(.bottom, 150)
             
             HStack(spacing: 100) {
                 PianoOctaveView(

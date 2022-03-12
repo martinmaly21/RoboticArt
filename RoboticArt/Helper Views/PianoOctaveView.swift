@@ -18,7 +18,7 @@ struct PianoOctaveView: View {
                 .font(.system(size: 40))
                 .bold()
             
-            HStack {
+            HStack(spacing: 5) {
                 ForEach(
                     notes,
                     id: \.self,

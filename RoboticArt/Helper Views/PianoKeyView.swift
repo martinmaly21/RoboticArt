@@ -20,6 +20,7 @@ struct PianoKeyView: View {
             Rectangle()
                 .background(Color.white)
                 .roundedCorners(radius: 20, corners: [.bottomLeft, .bottomRight])
+                .shadow(color: Color.black.opacity(0.7), radius: 5, x: 5, y: 5)
                 
             VStack {
                 Spacer()
