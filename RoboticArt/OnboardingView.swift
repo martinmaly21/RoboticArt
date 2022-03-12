@@ -15,10 +15,14 @@ struct OnboardingView: View {
             switch currentView {
             case .splashScreen:
                 SplashScreen(currentView: $currentView)
-            case .onboarding2:
-                Text("2")
-            case .onboarding3:
-                Text("3")
+            case .information:
+                Text("TODO: information")
+            case .chooseMode:
+                Text("TODO: chooseMode")
+            case .machineVisionMode:
+                Text("TODO: machineVisionMode")
+            case .midiMode:
+                Text("TODO: midiMode")
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

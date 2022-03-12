@@ -9,6 +9,8 @@ import Foundation
 
 enum CurrentView {
     case splashScreen
-    case onboarding2
-    case onboarding3
+    case information
+    case chooseMode
+    case machineVisionMode
+    case midiMode
 }
