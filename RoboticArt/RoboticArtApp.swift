@@ -10,9 +10,12 @@ import ORSSerial
 
 @main
 struct RoboticArtApp: App {
+    @StateObject var serialPortViewModel = SerialPortViewModel()
+    
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environmentObject(serialPortViewModel)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(
                         deadline: .now() + 0.3,

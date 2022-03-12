@@ -36,5 +36,8 @@ struct WhitePianoKeyView: View {
             .padding(.bottom, 25)
         }
         .frame(width: keyWidth, height: keyHeight)
+        .onTapGesture {
+            //TODO
+        }
     }
 }

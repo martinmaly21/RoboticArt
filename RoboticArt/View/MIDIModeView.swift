@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct MIDIModeView: View {
+    @EnvironmentObject var serialPortViewModel: SerialPortViewModel
+    
     @Binding var currentView: CurrentView
-    @StateObject var serialPortViewModel = SerialPortViewModel()
     @State var messageText: String = ""
     
     var body: some View {
