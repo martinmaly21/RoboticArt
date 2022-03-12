@@ -8,9 +8,6 @@
 import SwiftUI
 import ORSSerial
 
-//Declare global ORSSerialPortManager that can be used throughout app
-var manager = ORSSerialPortManager.shared()
-
 @main
 struct RoboticArtApp: App {
     var body: some Scene {

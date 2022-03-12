@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var serialPortViewModel = SerialPortViewModel()
+    
+    @State var messageText: String = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-            .onAppear {
-                //Connect to serial port
-                print("Connecting to serial port")
-            }
+        VStack {
+            TextField(
+                    "Data to send arduino",
+                    text: $messageText
+                )
+            
+            Button(
+                action: {
+                    serialPortViewModel.sendData(messageText)
+                },
+                label: {
+                    
+                    Text("Send!")
+                }
+            )
+        }
+        .padding()
     }
 }
 
