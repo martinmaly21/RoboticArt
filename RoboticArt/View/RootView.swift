@@ -16,13 +16,13 @@ struct RootView: View {
             case .splashScreen:
                 SplashScreenView(currentView: $currentView)
             case .information:
-                Text("TODO: information")
+                InformationView(currentView: $currentView)
             case .chooseMode:
-                Text("TODO: chooseMode")
+                ChooseModeView(currentView: $currentView)
             case .machineVisionMode:
-                Text("TODO: machineVisionMode")
+                MachineVisionModeView(currentView: $currentView)
             case .midiMode:
-                Text("TODO: midiMode")
+                MIDIModeView(currentView: $currentView)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
