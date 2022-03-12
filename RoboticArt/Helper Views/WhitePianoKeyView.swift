@@ -9,17 +9,14 @@ import SwiftUI
 
 struct WhitePianoKeyView: View {
     let noteType: NoteType
-    let keyHeight: CGFloat = 450
-    
-    var keyWidth: CGFloat {
-        return keyHeight / 5
-    }
+    let keyHeight: CGFloat
+    let keyWidth: CGFloat
     
     var body: some View {
         ZStack {
             Rectangle()
                 .background(Color.white)
-                .roundedCorners(radius: 20, corners: [.bottomLeft, .bottomRight])
+                .roundedCorners(radius: 14, corners: [.bottomLeft, .bottomRight])
                 .shadow(color: Color.black.opacity(0.7), radius: 5, x: 5, y: 5)
                 
             VStack {
@@ -39,11 +36,5 @@ struct WhitePianoKeyView: View {
             .padding(.bottom, 25)
         }
         .frame(width: keyWidth, height: keyHeight)
-    }
-}
-
-struct PianoKeyView_Previews: PreviewProvider {
-    static var previews: some View {
-        WhitePianoKeyView(noteType: .a1)
     }
 }

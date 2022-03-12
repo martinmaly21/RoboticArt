@@ -18,8 +18,9 @@ struct BlackPianoKeyView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .roundedCorners(radius: 20, corners: [.bottomLeft, .bottomRight])
-                .shadow(color: Color.black.opacity(0.7), radius: 5, x: 5, y: 5)
+                .fill(.black)
+                .roundedCorners(radius: 8, corners: [.bottomLeft, .bottomRight])
+                .shadow(color: Color.black.opacity(0.5), radius: 5, x: 2, y: 2)
         }
         .frame(width: keyWidth, height: keyHeight)
     }

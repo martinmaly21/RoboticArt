@@ -11,36 +11,55 @@ struct PianoOctaveView: View {
     let octaveName: String
     let notes: [NoteType]
     
+    let whiteKeyHeight: CGFloat = 450
+    var whiteKeyWidth: CGFloat {
+        return whiteKeyHeight / 5
+    }
+    
+    let spacing: CGFloat = 5
+    
     var body: some View {
-        GeometryReader { geo in
-            VStack(alignment: .leading) {
-                Text(octaveName)
-                    .font(.system(size: 40))
-                    .bold()
-                ZStack(alignment: .top) {
-                    HStack(spacing: 5) {
-                        ForEach(
-                            notes,
-                            id: \.self,
-                            content: { note in
-                                WhitePianoKeyView(noteType: note)
-                            }
-                        )
-                    }
+        VStack(alignment: .leading) {
+            Text(octaveName)
+                .font(.system(size: 40))
+                .bold()
+            
+            ZStack(alignment: .top) {
+                HStack(spacing: spacing) {
+                    ForEach(
+                        notes,
+                        id: \.self,
+                        content: { note in
+                            WhitePianoKeyView(
+                                noteType: note,
+                                keyHeight: whiteKeyHeight,
+                                keyWidth: whiteKeyWidth
+                            )
+                        }
+                    )
                     
-                    //sharps and flats
-                    HStack {
-                        
-                        BlackPianoKeyView()
-                        
-                        BlackPianoKeyView()
-                        
-                        BlackPianoKeyView()
-                        
-                        BlackPianoKeyView()
-                        
-                        BlackPianoKeyView()
-                    }
+                    Spacer()
+                }
+                
+                //in future, calculate these offsets
+                HStack {
+                    
+                    BlackPianoKeyView()
+                        .padding(.leading, 68.25)
+                    
+                    BlackPianoKeyView()
+                        .padding(.leading, 40)
+                    
+                    BlackPianoKeyView()
+                        .padding(.leading, 135)
+                    
+                    BlackPianoKeyView()
+                        .padding(.leading, 40)
+                    
+                    BlackPianoKeyView()
+                        .padding(.leading, 40)
+                    
+                    Spacer()
                 }
             }
         }
