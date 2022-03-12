@@ -32,7 +32,9 @@ struct SplashScreen: View {
                     animationDuration: 1
                 )
                     .onTapGesture {
-                        currentView = .onboarding2
+                        withAnimation {
+                            currentView = .onboarding2
+                        }
                     }
             }
     
