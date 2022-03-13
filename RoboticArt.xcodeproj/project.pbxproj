@@ -27,6 +27,7 @@
 		50C3617027DD2BB800E42B29 /* NoteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3616F27DD2BB800E42B29 /* NoteType.swift */; };
 		50C3617227DD2ED300E42B29 /* PianoOctaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617127DD2ED300E42B29 /* PianoOctaveView.swift */; };
 		50C3617427DD401B00E42B29 /* BlackPianoKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617327DD401B00E42B29 /* BlackPianoKeyView.swift */; };
+		50C3617827DE9F1500E42B29 /* CameraFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617727DE9F1500E42B29 /* CameraFeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		50C3616F27DD2BB800E42B29 /* NoteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteType.swift; sourceTree = "<group>"; };
 		50C3617127DD2ED300E42B29 /* PianoOctaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoOctaveView.swift; sourceTree = "<group>"; };
 		50C3617327DD401B00E42B29 /* BlackPianoKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackPianoKeyView.swift; sourceTree = "<group>"; };
+		50C3617727DE9F1500E42B29 /* CameraFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				50C3617127DD2ED300E42B29 /* PianoOctaveView.swift */,
 				50C3616A27DD277A00E42B29 /* WhitePianoKeyView.swift */,
 				50C3617327DD401B00E42B29 /* BlackPianoKeyView.swift */,
+				50C3617727DE9F1500E42B29 /* CameraFeedView.swift */,
 			);
 			path = "Helper Views";
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				50C3615627DCF5A500E42B29 /* RootView.swift in Sources */,
 				50C3615327DCE99300E42B29 /* SerialPortViewModel.swift in Sources */,
 				5070016A27D8269F008ACB9C /* RoboticArtApp.swift in Sources */,
+				50C3617827DE9F1500E42B29 /* CameraFeedView.swift in Sources */,
 				50C3615E27DD17C600E42B29 /* CurrentView.swift in Sources */,
 				50C3616B27DD277A00E42B29 /* WhitePianoKeyView.swift in Sources */,
 				50C3616E27DD295400E42B29 /* View.swift in Sources */,

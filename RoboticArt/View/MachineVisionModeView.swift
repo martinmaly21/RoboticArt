@@ -13,6 +13,11 @@ struct MachineVisionModeView: View {
     @Binding var currentView: CurrentView
     
     var body: some View {
-        PianoView()
+        ZStack {
+            CameraFeedView()
+            
+            PianoView()
+        }
+       
     }
 }
