@@ -4,6 +4,7 @@
 const byte numChars = 16;
 
 //constants for the shift register
+const int clearPin = 5;
 const int latchPin = 8;
 const int clockPin = 12;
 const int dataPin = 11;
@@ -20,9 +21,18 @@ void setup() {
     Serial.begin(9600);
 
     //set up pins
+    pinMode(clearPin, OUTPUT);
     pinMode(latchPin, OUTPUT);
     pinMode(dataPin, OUTPUT);
     pinMode(clockPin, OUTPUT);
+    
+    digitalWrite(clearPin, LOW);  
+    digitalWrite(clearPin, HIGH);  
+    
+    //set all to 0
+    digitalWrite(latchPin, LOW);  
+    shiftOut(dataPin, clockPin, MSBFIRST, 0);
+    digitalWrite(latchPin, HIGH);
 }
 
 void loop() {
