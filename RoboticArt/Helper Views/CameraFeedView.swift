@@ -22,6 +22,7 @@ struct CameraFeedView: View {
                 height: geometry.size.height,
                 alignment: .center)
               .clipped()
+              .cornerRadius(20)
           }
         } else {
           Color.black

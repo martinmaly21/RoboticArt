@@ -31,7 +31,6 @@ struct PianoView: View {
                 )
             }
             .padding()
-            .background(Color.gray.opacity(0.3))
             .cornerRadius(30)
         }
         .padding()
