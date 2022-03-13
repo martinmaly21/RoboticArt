@@ -35,11 +35,7 @@ class SerialPortViewModel: NSObject, ObservableObject {
     }
     
     func sendData(_ string: String) {
-        guard let dataToSend = "\(string)\n".data(using: .utf8) else {
-            fatalError("Could not synthesize message to send")
-        }
-        
-        port.send(dataToSend)
+        port.send("\(string)\n".data(using: .utf8)!)
     }
 }
 
