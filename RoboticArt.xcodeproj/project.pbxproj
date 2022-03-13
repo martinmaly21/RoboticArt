@@ -28,6 +28,11 @@
 		50C3617227DD2ED300E42B29 /* PianoOctaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617127DD2ED300E42B29 /* PianoOctaveView.swift */; };
 		50C3617427DD401B00E42B29 /* BlackPianoKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617327DD401B00E42B29 /* BlackPianoKeyView.swift */; };
 		50C3617827DE9F1500E42B29 /* CameraFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617727DE9F1500E42B29 /* CameraFeedView.swift */; };
+		50C3617B27DE9FA200E42B29 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617A27DE9FA200E42B29 /* CameraManager.swift */; };
+		50C3617D27DEA11500E42B29 /* CameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617C27DEA11500E42B29 /* CameraError.swift */; };
+		50C3617F27DEA2C500E42B29 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617E27DEA2C500E42B29 /* FrameManager.swift */; };
+		50C3618127DEA34500E42B29 /* MachineVisionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3618027DEA34500E42B29 /* MachineVisionViewModel.swift */; };
+		50C3618327DEA3A800E42B29 /* CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3618227DEA3A800E42B29 /* CGImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,11 @@
 		50C3617127DD2ED300E42B29 /* PianoOctaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoOctaveView.swift; sourceTree = "<group>"; };
 		50C3617327DD401B00E42B29 /* BlackPianoKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackPianoKeyView.swift; sourceTree = "<group>"; };
 		50C3617727DE9F1500E42B29 /* CameraFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedView.swift; sourceTree = "<group>"; };
+		50C3617A27DE9FA200E42B29 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		50C3617C27DEA11500E42B29 /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
+		50C3617E27DEA2C500E42B29 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
+		50C3618027DEA34500E42B29 /* MachineVisionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineVisionViewModel.swift; sourceTree = "<group>"; };
+		50C3618227DEA3A800E42B29 /* CGImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				5070016927D8269F008ACB9C /* RoboticArtApp.swift */,
+				50C3617927DE9F8E00E42B29 /* Manager */,
 				50C3616C27DD294600E42B29 /* Extensions */,
 				50C3615C27DD17BB00E42B29 /* Models */,
 				50C3615727DCFDB300E42B29 /* Helper Views */,
@@ -111,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				50C3615227DCE99300E42B29 /* SerialPortViewModel.swift */,
+				50C3618027DEA34500E42B29 /* MachineVisionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -134,6 +146,7 @@
 			children = (
 				50C3615D27DD17C600E42B29 /* CurrentView.swift */,
 				50C3616F27DD2BB800E42B29 /* NoteType.swift */,
+				50C3617C27DEA11500E42B29 /* CameraError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,8 +168,18 @@
 			isa = PBXGroup;
 			children = (
 				50C3616D27DD295400E42B29 /* View.swift */,
+				50C3618227DEA3A800E42B29 /* CGImage.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		50C3617927DE9F8E00E42B29 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				50C3617A27DE9FA200E42B29 /* CameraManager.swift */,
+				50C3617E27DEA2C500E42B29 /* FrameManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,17 +264,22 @@
 				50C3615927DCFDC400E42B29 /* CirclePulseButton.swift in Sources */,
 				50C3617227DD2ED300E42B29 /* PianoOctaveView.swift in Sources */,
 				50C3616727DD1A4A00E42B29 /* MIDIModeView.swift in Sources */,
+				50C3618127DEA34500E42B29 /* MachineVisionViewModel.swift in Sources */,
 				50C3617427DD401B00E42B29 /* BlackPianoKeyView.swift in Sources */,
 				50C3616527DD19B900E42B29 /* MachineVisionModeView.swift in Sources */,
+				50C3617B27DE9FA200E42B29 /* CameraManager.swift in Sources */,
 				50C3616927DD1D9E00E42B29 /* ModeView.swift in Sources */,
 				5070016C27D8269F008ACB9C /* PianoView.swift in Sources */,
+				50C3617D27DEA11500E42B29 /* CameraError.swift in Sources */,
 				50C3615627DCF5A500E42B29 /* RootView.swift in Sources */,
 				50C3615327DCE99300E42B29 /* SerialPortViewModel.swift in Sources */,
 				5070016A27D8269F008ACB9C /* RoboticArtApp.swift in Sources */,
 				50C3617827DE9F1500E42B29 /* CameraFeedView.swift in Sources */,
 				50C3615E27DD17C600E42B29 /* CurrentView.swift in Sources */,
+				50C3618327DEA3A800E42B29 /* CGImage.swift in Sources */,
 				50C3616B27DD277A00E42B29 /* WhitePianoKeyView.swift in Sources */,
 				50C3616E27DD295400E42B29 /* View.swift in Sources */,
+				50C3617F27DEA2C500E42B29 /* FrameManager.swift in Sources */,
 				50C3616327DD199A00E42B29 /* ChooseModeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +416,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) camera use";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -415,6 +444,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) camera use";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
