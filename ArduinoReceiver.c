@@ -1,7 +1,16 @@
-//16 bits will be sent because there are 16 keys
+/* atoi example */
+#include <stdio.h> 
+#include <stdlib.h>    
+#include <string.h>
+
+//#include <iostream>
+//#include <string>
+//using namespace std;
+
+//17 bits will be sent because there are 16 keys (plus a null character)
 //E.g. "1000000000000001" would play the first and last key
 //E.g. "0000000110000000" would play the two middle keys
-const byte numChars = 16;
+const byte numChars = 17;
 
 //constants for the shift register
 int clearPin = 5; //Arduino pin 5 connected to Pin 10, SRCLR(Clear/Reset) of 74HC595
@@ -11,7 +20,8 @@ int latchClock = 8;  //Arduino pin 8 connected to Pin 12, RCLK(storage/latch clo
 
 //this array of characters is used to save the string
 //that is received from the SwiftUI app
-char receivedChars[numChars];
+char hand1Value[(numChars / 2) + 1];
+char hand2Value[(numChars / 2) + 1];
 
 //this flag lets us know if there is new data available
 boolean newData = false;
@@ -40,23 +50,12 @@ void setup() {
 }
 
 void loop() {
-   digitalWrite(latchClock, LOW);    
-   shiftOut(serialData, shiftClock, MSBFIRST, 0b10101011);      // shift out the bits
-   shiftOut(serialData, shiftClock, MSBFIRST, 0b10101011);
-   digitalWrite(latchClock, HIGH);     //take the latch pin high so the LEDs will light up
-   delay(500);     // pause before next value
-   digitalWrite(latchClock, LOW);    
-   shiftOut(serialData, shiftClock, MSBFIRST, 0b00000000);      // shift out the bits
-   shiftOut(serialData, shiftClock, MSBFIRST, 0b00000000);
-   digitalWrite(latchClock, HIGH);     //take the latch pin high so the LEDs will light up
-   delay(500);     // pause before next value
-
-  
-//    receiveValueFromApp();
-//    playPianoKeys();
+    receiveValueFromApp();
+    playPianoKeys();
 }
 
 void receiveValueFromApp() {
+    char receivedChars[numChars];
     static byte index = 0;
     char endMarker = '\n';
     char receivedCharacter;
@@ -73,15 +72,40 @@ void receiveValueFromApp() {
             newData = true;
         }
     }
+
+    //parse into separate hands
+    for (int i = 0; i < 8; i++) {
+        hand1Value[i] = receivedChars[i];
+    }
+    hand1Value[8] = '\0';
+
+    for (int i = 8; i < 16; i++) {
+        hand2Value[i - 8] = receivedChars[i];
+    }
+    hand2Value[8] = '\0';
+}
+
+int convertBinaryToInteger(char* s) {
+    int value = 0;
+    for (int i=0; i< strlen(s); i++)  // for every character in the string  strlen(s) returns the length of a char array
+    {
+      value *= 2; // double the result so far
+      if (s[i] == '1') value++;  //add 1 if needed
+    }
+    
+    return value;
 }
 
 void playPianoKeys() {
     if (newData == true) {
-        //convert array of characters into integer
-        int receivedIntegerValue = atoi(receivedChars);
-        
         digitalWrite(latchClock, LOW);  
-        shiftOut(serialData, shiftClock, MSBFIRST, receivedIntegerValue);
+        
+        int hand1Int = convertBinaryToInteger(hand1Value);
+        shiftOut(serialData, shiftClock, MSBFIRST, hand1Int);
+
+        int hand2Int = convertBinaryToInteger(hand2Value);
+        shiftOut(serialData, shiftClock, MSBFIRST, hand2Int);
+        
         digitalWrite(latchClock, HIGH);
         
         newData = false;
