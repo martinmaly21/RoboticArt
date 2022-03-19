@@ -100,10 +100,10 @@ void playPianoKeys() {
     if (newData == true) {
         digitalWrite(latchClock, LOW);  
         
-        int hand1Int = convertBinaryToInteger(hand1Value);
+        int hand1Int = convertBinaryToInteger(hand2Value);
         shiftOut(serialData, shiftClock, LSBFIRST, hand1Int);
 
-        int hand2Int = convertBinaryToInteger(hand2Value);
+        int hand2Int = convertBinaryToInteger(hand1Value);
         shiftOut(serialData, shiftClock, LSBFIRST, hand2Int);
         
         digitalWrite(latchClock, HIGH);
