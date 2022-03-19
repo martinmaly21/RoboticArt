@@ -73,14 +73,14 @@ void receiveValueFromApp() {
         }
     }
 
-    //parse into separate hands
-    for (int i = 0; i < 8; i++) {
-        hand1Value[i] = receivedChars[i];
+    for (int i = 8; i < 16; i++) {
+        hand1Value[i - 8] = receivedChars[i];
     }
     hand1Value[8] = '\0';
-
-    for (int i = 8; i < 16; i++) {
-        hand2Value[i - 8] = receivedChars[i];
+    
+    //parse into separate hands
+    for (int i = 0; i < 8; i++) {
+        hand2Value[i] = receivedChars[i];
     }
     hand2Value[8] = '\0';
 }
@@ -101,10 +101,10 @@ void playPianoKeys() {
         digitalWrite(latchClock, LOW);  
         
         int hand1Int = convertBinaryToInteger(hand1Value);
-        shiftOut(serialData, shiftClock, MSBFIRST, hand1Int);
+        shiftOut(serialData, shiftClock, LSBFIRST, hand1Int);
 
         int hand2Int = convertBinaryToInteger(hand2Value);
-        shiftOut(serialData, shiftClock, MSBFIRST, hand2Int);
+        shiftOut(serialData, shiftClock, LSBFIRST, hand2Int);
         
         digitalWrite(latchClock, HIGH);
         
