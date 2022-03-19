@@ -4,10 +4,10 @@
 const byte numChars = 16;
 
 //constants for the shift register
-const int clearPin = 5;
-const int latchPin = 8;
-const int clockPin = 12;
-const int dataPin = 11;
+const int clearPin = 5; //orange
+const int latchPin = 8;  //yellow
+const int clockPin = 12; //white
+const int dataPin = 11; //green
 
 //this array of characters is used to save the string
 //that is received from the SwiftUI app
