@@ -16,12 +16,10 @@ struct MachineVisionModeView: View {
     
     var body: some View {
         ZStack {
-            CameraFeedView(
-                image: machineVisionViewModel.frame,
-                indexTip: machineVisionViewModel.indexTipLocation
-            )
+            CameraFeedView()
             
             PianoView()
         }
+        .environmentObject(machineVisionViewModel)
     }
 }
