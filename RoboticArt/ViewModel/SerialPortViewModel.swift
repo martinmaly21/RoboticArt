@@ -41,6 +41,10 @@ class SerialPortViewModel: NSObject, ObservableObject {
     func sendData(_ string: String) {
         let indices = string.indices(of: "1").map { string.distance(from: string.startIndex, to: $0)}
         
+        guard indices.count <= 4 else {
+            fatalError("Attempting to send too many keys to ed")
+        }
+        
         var currentNotes: [NoteType] = []
         for index in indices {
             currentNotes.append(NoteType.allCases[index])
