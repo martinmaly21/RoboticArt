@@ -24,19 +24,20 @@ struct CameraFeedView: View {
                       alignment: .center)
                     .clipped()
                     .cornerRadius(20)
-                  
-                  //TODO:
-                  if let indexTip = machineVisionViewModel.indexTipLocation {
-                      Circle()
-                          .frame(width: 20, height: 20)
-                      
-                          .position(
-                            x: geometry.size.width - (indexTip.x * geometry.size.width),
-                            y: indexTip.y * geometry.size.height
-                          )
+
+                  if let indexFingers = machineVisionViewModel.indexFingerLocations {
+                      ForEach(indexFingers, id: \.self) { fingerPoint in
+                          Circle()
+                              .frame(width: 20, height: 20)
+                              .position(
+                                x: geometry.size.width - (fingerPoint.x * geometry.size.width),
+                                y: fingerPoint.y * geometry.size.height
+                              )
+                      }
+                  } else {
+                      EmptyView()
                   }
               }
-            
           }
         } else {
           Color.clear

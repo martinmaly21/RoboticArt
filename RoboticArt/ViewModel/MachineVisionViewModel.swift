@@ -9,7 +9,7 @@ import CoreImage
 
 class MachineVisionViewModel: ObservableObject {
     @Published var frame: CGImage?
-    @Published var indexTipLocation: CGPoint?
+    @Published var indexFingerLocations: [CGPoint]?
     
     private let frameManager = FrameManager.shared
     
@@ -26,11 +26,11 @@ class MachineVisionViewModel: ObservableObject {
             .assign(to: &$frame)
         
         
-        frameManager.$indexTipLocation
+        frameManager.$indexFingerLocations
             .receive(on: RunLoop.main)
             .compactMap { value in
                 return value
             }
-            .assign(to: &$indexTipLocation)
+            .assign(to: &$indexFingerLocations)
     }
 }

@@ -33,6 +33,7 @@
 		50C3617F27DEA2C500E42B29 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617E27DEA2C500E42B29 /* FrameManager.swift */; };
 		50C3618127DEA34500E42B29 /* MachineVisionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3618027DEA34500E42B29 /* MachineVisionViewModel.swift */; };
 		50C3618327DEA3A800E42B29 /* CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3618227DEA3A800E42B29 /* CGImage.swift */; };
+		50DA49E027EBE4EF00FA8EAA /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DA49DF27EBE4EF00FA8EAA /* CGPoint.swift */; };
 		50F26B5E27E9752300453FF7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F26B5D27E9752300453FF7 /* Task.swift */; };
 		50F7232227EA9EED008EF973 /* MIDISongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7232127EA9EED008EF973 /* MIDISongCell.swift */; };
 		50F7232427EA9F01008EF973 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7232327EA9F01008EF973 /* Song.swift */; };
@@ -71,6 +72,7 @@
 		50C3617E27DEA2C500E42B29 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		50C3618027DEA34500E42B29 /* MachineVisionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineVisionViewModel.swift; sourceTree = "<group>"; };
 		50C3618227DEA3A800E42B29 /* CGImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImage.swift; sourceTree = "<group>"; };
+		50DA49DF27EBE4EF00FA8EAA /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		50F26B5D27E9752300453FF7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		50F7232127EA9EED008EF973 /* MIDISongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDISongCell.swift; sourceTree = "<group>"; };
 		50F7232327EA9F01008EF973 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				50C3618227DEA3A800E42B29 /* CGImage.swift */,
 				50F26B5D27E9752300453FF7 /* Task.swift */,
 				50F7232527EAA8C6008EF973 /* String.swift */,
+				50DA49DF27EBE4EF00FA8EAA /* CGPoint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				50F7233D27EAEE0E008EF973 /* GlissandoView.swift in Sources */,
 				50F7233F27EAF0F6008EF973 /* TappableDemo.swift in Sources */,
 				50C3616E27DD295400E42B29 /* View.swift in Sources */,
+				50DA49E027EBE4EF00FA8EAA /* CGPoint.swift in Sources */,
 				50C3617F27DEA2C500E42B29 /* FrameManager.swift in Sources */,
 				50F7232427EA9F01008EF973 /* Song.swift in Sources */,
 				50C3616327DD199A00E42B29 /* ChooseModeView.swift in Sources */,
