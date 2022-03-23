@@ -27,6 +27,8 @@ struct MIDIModePiano: View {
             await drunkenSailor()
         case "Twinkle Twinkle Little Star":
             await twinkleTwinkleLittleStar()
+        case "Jingle Bells":
+            await jingleBells()
         default:
             fatalError()
         }
@@ -34,153 +36,140 @@ struct MIDIModePiano: View {
     
     func drunkenSailor() async {
         await playNote(noteType: .off, for: 0.5)
-
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.2)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         // bar2
-
+        
         await playNote(noteType: .off, for: 0.1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.2)
-
+        
         await playNote(noteType: [.d2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.f2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         // bar 3
-
+        
         await playNote(noteType: [.g2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.g2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.1)
-
+        
         await playNote(noteType: [.g2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.1)
-
+        
         await playNote(noteType: [.g2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.2)
-
+        
         await playNote(noteType: [.g2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.1)
-
+        
         await playNote(noteType: [.g2,.d1,.f1], for: 0.5)
-
+        
         // bar4
-
+        
         await playNote(noteType: .off, for: 0.1)
-
+        
         await playNote(noteType: [.g2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.2)
-
+        
         await playNote(noteType: [.d2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.f2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         // bar5
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.2)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         // bar6
-
+        
         await playNote(noteType: .off, for: 0.1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.d1,.f1], for: 0.1)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.b2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.c4,.d1,.f1], for: 0.5)
-
+        
         // bar 7
-
+        
         await playNote(noteType: [.off], for: 0.1)
-
+        
         await playNote(noteType: [.c4,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.a2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.g2,.d1,.f1], for: 0.5)
-
+        
         await playNote(noteType: [.e2,.d1,.f1], for: 0.5)
-
+        
         // bar 8
-
+        
         await playNote(noteType: [.off], for: 0.2)
-
+        
         await playNote(noteType: [.d2,.d1,.f1], for: 1)
-
+        
         await playNote(noteType: [.off], for: 0.2)
-
+        
         await playNote(noteType: [.d2,.d1,.f1], for: 1)
-
-
-
-
-
-
-
-
-
-
-
-
     }
     
     func twinkleTwinkleLittleStar() async {
@@ -216,7 +205,7 @@ struct MIDIModePiano: View {
         //I
         await playNote(noteType: .f2, for: noteLength)
         await playNote(noteType: .off, for: offLength)
-
+        
         //wonder
         await playNote(noteType: .e2, for: noteLength)
         await playNote(noteType: .off, for: offLength)
@@ -245,10 +234,10 @@ struct MIDIModePiano: View {
         await playNote(noteType: .e2, for: noteLength)
         await playNote(noteType: .off, for: offLength)
         await playNote(noteType: .e2, for: noteLength)
-
+        
         //Highhhhh
         await playNote(noteType: .d2, for: 2*noteLength)    //end of line 3
-
+        
         // like a
         await playNote(noteType: .g2, for: noteLength)
         await playNote(noteType: .off, for: offLength)
@@ -264,20 +253,20 @@ struct MIDIModePiano: View {
         await playNote(noteType: .e2, for: noteLength)
         await playNote(noteType: .off, for: offLength)
         await playNote(noteType: .e2, for: noteLength)
-
+        
         //sky
         await playNote(noteType: .d2, for: 2*noteLength)    //end of line 4
-
+        
         //twinkle
         await playNote(noteType: .c3, for: noteLength)
         await playNote(noteType: .off, for: offLength)
         await playNote(noteType: .c3, for: noteLength)
-            
+        
         //twinkle
         await playNote(noteType: .g2, for: noteLength)
         await playNote(noteType: .off, for: offLength)
         await playNote(noteType: .g2, for: noteLength)
-    
+        
         //little
         await playNote(noteType: .a2, for: noteLength)
         await playNote(noteType: .off, for: offLength)
@@ -291,7 +280,7 @@ struct MIDIModePiano: View {
         await playNote(noteType: .off, for: offLength)
         await playNote(noteType: .f2, for: noteLength)
         
-
+        
         // wonder
         await playNote(noteType: .e2, for: noteLength)
         await playNote(noteType: .off, for: offLength)
@@ -306,7 +295,95 @@ struct MIDIModePiano: View {
         
         //are
         await playNote(noteType: .c3, for: 2*noteLength) //end of line 6
-
+        
+    }
+    
+    func jingleBells() async {
+        let noteLength = 0.2
+        let offLength = 0.03
+        
+        let song: [(NoteType, Double)] = [
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,2*noteLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,2*noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.g2,noteLength),
+            (.c2,noteLength),
+            (.d2,noteLength),
+            (.e2,4*noteLength),
+            (.f2,noteLength),
+            (.off,offLength),
+            (.f2,noteLength),
+            (.off,offLength),
+            (.f2,noteLength),
+            (.off,offLength),
+            (.f2,noteLength),
+            (.off,offLength),
+            (.f2,noteLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.e2,noteLength),
+            (.d2,noteLength),
+            (.off,offLength),
+            (.d2,noteLength),
+            (.e2,noteLength),
+            (.d2,2*noteLength),
+            (.g2,2*noteLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,2*noteLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,2*noteLength),
+            (.e2,noteLength),
+            (.g2,noteLength),
+            (.c2,noteLength),
+            (.d2,noteLength),
+            (.e2,4*noteLength),
+            (.f2,noteLength),
+            (.off,offLength),
+            (.f2,noteLength),
+            (.off,offLength),
+            (.f2,noteLength),
+            (.off,offLength),
+            (.f2,noteLength),
+            (.off,offLength),
+            (.f2,noteLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.off,offLength),
+            (.e2,noteLength),
+            (.g2,noteLength),
+            (.off,offLength),
+            (.g2,noteLength),
+            (.f2,noteLength),
+            (.d2,noteLength),
+            (.c2,noteLength),
+        ]
+        
+        for note in song{
+            await playNote(noteType: note.0, for: note.1)
+        }
     }
     
     func playNote(noteType: NoteType, for seconds: Double) async {

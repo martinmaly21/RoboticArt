@@ -25,6 +25,12 @@ struct MIDIModeView: View {
             artist: "Nursery Rhyme",
             image: NSImage(named: "Twinkle")!
         ),
+        
+        Song(
+            name: "Jingle Bells",
+            artist: "Santa",
+            image: NSImage(named: "Twinkle")!
+        ),
     
     ]
     
