@@ -15,6 +15,8 @@ class SerialPortViewModel: NSObject, ObservableObject {
     
     let port: ORSSerialPort!
     
+    @Published var currentPlayedNotes: [NoteType] = []
+    
     override init() {
         guard let arduinoPort = manager.availablePorts.first(where: { $0.name.contains("usbmodem")}) else {
             port = ORSSerialPort(path: "")
@@ -37,7 +39,18 @@ class SerialPortViewModel: NSObject, ObservableObject {
     }
     
     func sendData(_ string: String) {
+        let indices = string.indices(of: "1").map { string.distance(from: string.startIndex, to: $0)}
+        
+        var currentNotes: [NoteType] = []
+        for index in indices {
+            currentNotes.append(NoteType.allCases[index])
+        }
+        
         port.send("\(string)\n".data(using: .utf8)!)
+        
+        DispatchQueue.main.async {
+            self.currentPlayedNotes = currentNotes
+        }
     }
 }
 

@@ -14,6 +14,10 @@ struct WhitePianoKeyView: View {
     let keyHeight: CGFloat
     let keyWidth: CGFloat
     
+    private var isBeingPlayed: Bool  {
+        return serialPortViewModel.currentPlayedNotes.contains(noteType)
+    }
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -38,6 +42,8 @@ struct WhitePianoKeyView: View {
             }
             .padding(.bottom, 25)
         }
+        .background(isBeingPlayed ? Color.green : Color.clear)
+        .roundedCorners(radius: 14, corners: [.bottomLeft, .bottomRight])
         .frame(width: keyWidth, height: keyHeight)
         .onTapGesture {
             serialPortViewModel.sendData(noteType.binaryNote)

@@ -12,5 +12,6 @@ enum CurrentView {
     case information
     case chooseMode
     case machineVisionMode
-    case midiMode
+    case chooseSong
+    case midiModePiano(song: Song)
 }

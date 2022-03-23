@@ -29,7 +29,7 @@ struct ChooseModeView: View {
                     ModeView(modeTitle: "MIDI", modeImage: nil)
                         .onTapGesture {
                             withAnimation {
-                                currentView = .midiMode
+                                currentView = .chooseSong
                             }
                         }
                 }
