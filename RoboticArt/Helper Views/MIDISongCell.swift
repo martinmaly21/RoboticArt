@@ -15,6 +15,9 @@ struct MIDISongCell: View {
             Image(
                 nsImage: song.image
             )
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300, height: 120, alignment: .center)
                 .cornerRadius(8)
                 .padding(.trailing, 12)
             
