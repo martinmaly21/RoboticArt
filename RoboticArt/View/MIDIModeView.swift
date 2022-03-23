@@ -19,6 +19,12 @@ struct MIDIModeView: View {
             artist: "Irish Rovers",
             image: NSImage(named: "DrunkenSailor")!
         ),
+        
+        Song(
+            name: "Twinkle Twinkle Little Star",
+            artist: "Nursery Rhyme",
+            image: NSImage(named: "Twinkle")!
+        ),
     
     ]
     
@@ -85,102 +91,159 @@ struct MIDIModeView: View {
     }
     
     func twinkleTwinkleLittleStar() async {
-        await playNote(noteType: .c1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .c1, for: 0.5)
 
-        await playNote(noteType: .g1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .g1, for: 0.5)
+        var noteLength: Double
         
-        await playNote(noteType: .a1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .a1, for: 0.5)
+        noteLength = 0.15
         
-        await playNote(noteType: .g1, for: 0.5)
+        var offLength: Double
         
-        await playNote(noteType: .f1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .f1, for: 0.5)
+        offLength = 0.1
         
-        await playNote(noteType: .e1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .e1, for: 0.5)
-        
-        await playNote(noteType: .d1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .d1, for: 0.5)
-        
-        await playNote(noteType: .c1, for: 0.5)
+        //twinkle
+        await playNote(noteType: .c3, for: noteLength)
+        await playNote(noteType: .off, for: noteLength)
+        await playNote(noteType: .c3, for: noteLength)
         
         
-        //
-        await playNote(noteType: .g1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .g1, for: 0.5)
+        //twinkle
+        await playNote(noteType: .g2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .g2, for: noteLength)
         
-        await playNote(noteType: .f1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .f1, for: 0.5)
+        //little
+        await playNote(noteType: .a2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .a2, for: noteLength)
         
-        await playNote(noteType: .e1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .e1, for: 0.5)
+        //Star
+        await playNote(noteType: .g2, for: 2*noteLength) // end of line 1
         
-        await playNote(noteType: .d1, for: 0.5)
-        
-        //
-        await playNote(noteType: .g1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .g1, for: 0.5)
-        
-        await playNote(noteType: .f1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .f1, for: 0.5)
-        
-        await playNote(noteType: .e1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .e1, for: 0.5)
-        
-        await playNote(noteType: .d1, for: 0.5)
-        
-        //
-        await playNote(noteType: .c1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .c1, for: 0.5)
+        //how
+        await playNote(noteType: .f2, for:noteLength )
+        await playNote(noteType: .off, for: offLength)
+        //I
+        await playNote(noteType: .f2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
 
-        await playNote(noteType: .g1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .g1, for: 0.5)
+        //wonder
+        await playNote(noteType: .e2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .e2, for: noteLength)
         
-        await playNote(noteType: .a1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .a1, for: 0.5)
+        //what
+        await playNote(noteType: .d2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        //you
+        await playNote(noteType: .d2, for: noteLength)
         
-        await playNote(noteType: .g1, for: 0.5)
         
-        await playNote(noteType: .f1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .f1, for: 0.5)
+        //are
+        await playNote(noteType: .c3, for: 2*noteLength)    //end of line 2
         
-        await playNote(noteType: .e1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .e1, for: 0.5)
         
-        await playNote(noteType: .d1, for: 0.5)
-        await liftFingers()
-        await playNote(noteType: .d1, for: 0.5)
+        //up ab
+        await playNote(noteType: .g2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .g2, for: noteLength)
         
-        await playNote(noteType: .c1, for: 0.5)
+        //ove the
+        await playNote(noteType: .f2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .f2, for: noteLength)
+        
+        //world so
+        await playNote(noteType: .e2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .e2, for: noteLength)
+
+        //Highhhhh
+        await playNote(noteType: .d2, for: 2*noteLength)    //end of line 3
+
+        // like a
+        await playNote(noteType: .g2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .g2, for: noteLength)
+        
+        //diamond
+        await playNote(noteType: .f2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .f2, for: noteLength)
+        
+        
+        //in the
+        await playNote(noteType: .e2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .e2, for: noteLength)
+
+        //sky
+        await playNote(noteType: .d2, for: 2*noteLength)    //end of line 4
+
+
+
+        //twinkle
+        await playNote(noteType: .c3, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .c3, for: noteLength)
+            
+        //twinkle
+        await playNote(noteType: .g2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .g2, for: noteLength)
+    
+        //little
+        await playNote(noteType: .a2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .a2, for: noteLength)
+        
+        //staaar
+        await playNote(noteType: .g2, for: 2*noteLength) // end of line 5
+        
+        
+        
+        
+        //how  i
+        await playNote(noteType: .f2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .f2, for: noteLength)
+        
+
+        // wonder
+        await playNote(noteType: .e2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .e2, for: noteLength)
+        
+        
+        //what you
+        await playNote(noteType: .d2, for: noteLength)
+        await playNote(noteType: .off, for: offLength)
+        await playNote(noteType: .d2, for: noteLength)
+        
+        
+        //are
+        await playNote(noteType: .c3, for: 2*noteLength) //end of line 6
+
     }
     
     func playNote(noteType: NoteType, for seconds: Double) async {
         serialPortViewModel.sendData(noteType.binaryNote)
-        await Task.sleep(seconds: 1)
+        await Task.sleep(seconds: seconds)
+    }
+    
+    func playNote(noteType: [NoteType], for seconds: Double) async {
+        let convertedBinary: [UInt16] = noteType.compactMap { UInt16($0.binaryNote, radix: 2) }
+        
+        var intermediateResult: UInt16 = 0
+        convertedBinary.forEach { intermediateResult = intermediateResult | $0 }
+        
+        let resx = String(intermediateResult, radix: 2).pad(toSize: 16)
+        
+        serialPortViewModel.sendData(resx)
+        await Task.sleep(seconds: seconds)
     }
     
     func liftFingers() async {
         serialPortViewModel.sendData(NoteType.off.binaryNote)
-        await Task.sleep(seconds: 0.1)
+        await Task.sleep(seconds: 1)
     }
 }

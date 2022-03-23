@@ -36,6 +36,7 @@
 		50F26B5E27E9752300453FF7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F26B5D27E9752300453FF7 /* Task.swift */; };
 		50F7232227EA9EED008EF973 /* MIDISongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7232127EA9EED008EF973 /* MIDISongCell.swift */; };
 		50F7232427EA9F01008EF973 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7232327EA9F01008EF973 /* Song.swift */; };
+		50F7232627EAA8C6008EF973 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7232527EAA8C6008EF973 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		50F26B5D27E9752300453FF7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		50F7232127EA9EED008EF973 /* MIDISongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDISongCell.swift; sourceTree = "<group>"; };
 		50F7232327EA9F01008EF973 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		50F7232527EAA8C6008EF973 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				50C3616D27DD295400E42B29 /* View.swift */,
 				50C3618227DEA3A800E42B29 /* CGImage.swift */,
 				50F26B5D27E9752300453FF7 /* Task.swift */,
+				50F7232527EAA8C6008EF973 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				50C3617027DD2BB800E42B29 /* NoteType.swift in Sources */,
 				50C3615B27DD17A800E42B29 /* SplashScreenView.swift in Sources */,
 				50C3616127DD196700E42B29 /* InformationView.swift in Sources */,
+				50F7232627EAA8C6008EF973 /* String.swift in Sources */,
 				50C3615927DCFDC400E42B29 /* CirclePulseButton.swift in Sources */,
 				50C3617227DD2ED300E42B29 /* PianoOctaveView.swift in Sources */,
 				50C3616727DD1A4A00E42B29 /* MIDIModeView.swift in Sources */,
