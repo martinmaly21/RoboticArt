@@ -28,57 +28,41 @@ struct MultipleKeysAtOnce: View {
                 
                 HStack(spacing: 30) {
                     
-                    Button(
-                        action: {
+                    Text("1 Key")
+                        .frame(width: 200, height: 100)
+                        .font(.system(size: 25))
+                        .background(.thickMaterial)
+                        .cornerRadius(20)
+                        .onTapGesture {
                             serialPortViewModel.sendData("1000000000000000")
-                        },
-                        label: {
-                            Text("1 Key")
-                                .frame(width: 200, height: 100)
-                                .font(.system(size: 25))
-                                .background(.thickMaterial)
-                                .cornerRadius(20)
                         }
-                    )
                     
-                    Button(
-                        action: {
+                    Text("2 Keys")
+                        .frame(width: 200, height: 100)
+                        .font(.system(size: 25))
+                        .background(.thickMaterial)
+                        .cornerRadius(20)
+                        .onTapGesture {
                             serialPortViewModel.sendData("1100000000000000")
-                        },
-                        label: {
-                            Text("2 Keys")
-                                .frame(width: 200, height: 100)
-                                .font(.system(size: 25))
-                                .background(.thickMaterial)
-                                .cornerRadius(20)
                         }
-                    )
                     
-                    Button(
-                        action: {
+                    Text("3 Keys")
+                        .frame(width: 200, height: 100)
+                        .font(.system(size: 25))
+                        .background(.thickMaterial)
+                        .cornerRadius(20)
+                        .onTapGesture {
                             serialPortViewModel.sendData("1110000000000000")
-                        },
-                        label: {
-                            Text("3 Keys")
-                                .frame(width: 200, height: 100)
-                                .font(.system(size: 25))
-                                .background(.thickMaterial)
-                                .cornerRadius(20)
                         }
-                    )
                     
-                    Button(
-                        action: {
+                    Text("4 Keys")
+                        .frame(width: 200, height: 100)
+                        .font(.system(size: 25))
+                        .background(.thickMaterial)
+                        .cornerRadius(20)
+                        .onTapGesture {
                             serialPortViewModel.sendData("1111000000000000")
-                        },
-                        label: {
-                            Text("4 Keys")
-                                .frame(width: 200, height: 100)
-                                .font(.system(size: 25))
-                                .background(.thickMaterial)
-                                .cornerRadius(20)
                         }
-                    )
                 }
                 
                 CirclePulseButton(
@@ -89,6 +73,8 @@ struct MultipleKeysAtOnce: View {
                     animationDuration: 1
                 )
                     .onTapGesture {
+                        serialPortViewModel.sendData(NoteType.off.binaryNote)
+                        
                         withAnimation {
                             currentView = .swipingAcrossKeyboardDemo
                         }

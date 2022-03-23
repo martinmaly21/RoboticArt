@@ -25,18 +25,27 @@ struct GlissandoView: View {
                 Spacer()
                     .frame(height: 100)
                 
+                Text("Tap to glissando")
+                    .frame(width: 200, height: 100)
+                    .font(.system(size: 25))
+                    .background(.thickMaterial)
+                    .cornerRadius(20)
+                    .onTapGesture {
+                        Task {
+                            await glissando()
+                        }
+                    }
+                
                 
                 CirclePulseButton(
                     color: .mint,
-                    text: "👌 to glissando",
+                    text: "👌 to continue",
                     buttonDimension: 250,
                     numberOfOuterCircles: 15,
                     animationDuration: 1
                 )
                     .onTapGesture {
                         Task {
-                            await glissando()
-                            
                             withAnimation {
                                 currentView = .chooseMode
                             }

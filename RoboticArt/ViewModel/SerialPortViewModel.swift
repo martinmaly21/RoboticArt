@@ -50,7 +50,7 @@ class SerialPortViewModel: NSObject, ObservableObject {
             currentNotes.append(NoteType.allCases[index])
         }
         
-        port.send("\(string)\n".data(using: .utf8)!)
+        //port.send("\(string)\n".data(using: .utf8)!)
         
         DispatchQueue.main.async {
             self.currentPlayedNotes = currentNotes
