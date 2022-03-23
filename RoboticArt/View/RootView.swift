@@ -24,7 +24,7 @@ struct RootView: View {
             case .chooseSong:
                 MIDIModeView(currentView: $currentView)
             case .midiModePiano(let song):
-                MIDIModePiano(song: song)
+                MIDIModePiano(currentView: $currentView, song: song)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

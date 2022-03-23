@@ -10,6 +10,8 @@ import SwiftUI
 struct MIDIModePiano: View {
     @EnvironmentObject var serialPortViewModel: SerialPortViewModel
     
+    @Binding var currentView: CurrentView
+    
     let song: Song
     
     var body: some View {
@@ -31,6 +33,13 @@ struct MIDIModePiano: View {
             await jingleBells()
         default:
             fatalError()
+        }
+        
+        //reset all fingers to off position
+        await liftFingers()
+        
+        withAnimation {
+            currentView = .chooseSong
         }
     }
     
