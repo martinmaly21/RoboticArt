@@ -94,16 +94,16 @@ struct MIDIModeView: View {
 
         var noteLength: Double
         
-        noteLength = 0.15
+        noteLength = 0.1
         
         var offLength: Double
         
-        offLength = 0.1
+        offLength = 0.02
         
         //twinkle
-        await playNote(noteType: .c3, for: noteLength)
+        await playNote(noteType: .c2, for: noteLength)
         await playNote(noteType: .off, for: noteLength)
-        await playNote(noteType: .c3, for: noteLength)
+        await playNote(noteType: .c2, for: noteLength)
         
         
         //twinkle
@@ -139,7 +139,7 @@ struct MIDIModeView: View {
         
         
         //are
-        await playNote(noteType: .c3, for: 2*noteLength)    //end of line 2
+        await playNote(noteType: .c2, for: 2*noteLength)    //end of line 2
         
         
         //up ab
@@ -182,9 +182,9 @@ struct MIDIModeView: View {
 
 
         //twinkle
-        await playNote(noteType: .c3, for: noteLength)
+        await playNote(noteType: .c2, for: noteLength)
         await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .c3, for: noteLength)
+        await playNote(noteType: .c2, for: noteLength)
             
         //twinkle
         await playNote(noteType: .g2, for: noteLength)
@@ -221,7 +221,7 @@ struct MIDIModeView: View {
         
         
         //are
-        await playNote(noteType: .c3, for: 2*noteLength) //end of line 6
+        await playNote(noteType: .c2, for: 2*noteLength) //end of line 6
 
     }
     
