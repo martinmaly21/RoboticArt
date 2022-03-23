@@ -13,20 +13,26 @@ struct ChooseModeView: View {
     var body: some View {
         HStack {
             VStack(alignment: .center, spacing: 25) {
-                Text("Choose Mode")
+                Text("Choose how you'd like to interact with Ed!")
                     .font(.system(size: 60))
                     .bold()
                     .padding(.bottom, 40)
                 
-                HStack {
-                    ModeView(modeTitle: "Computer Vision", modeImage: nil)
+                HStack(spacing: 20) {
+                    ModeView(
+                        modeTitle: "Computer Vision 👀",
+                        modeImage: NSImage(named: "HandImage")!
+                    )
                         .onTapGesture {
                             withAnimation {
                                 currentView = .machineVisionMode
                             }
                         }
                     
-                    ModeView(modeTitle: "MIDI", modeImage: nil)
+                    ModeView(
+                        modeTitle: "Play song 🎹",
+                        modeImage: NSImage(named: "SheetMusic")!
+                    )
                         .onTapGesture {
                             withAnimation {
                                 currentView = .chooseSong
@@ -39,7 +45,7 @@ struct ChooseModeView: View {
             }
             
         }
-        .padding(.top, 300)
+        .padding(.top, 200)
         
         Spacer()
     }
