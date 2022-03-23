@@ -17,7 +17,7 @@ struct InformationView: View {
                     .font(.system(size: 60))
                     .bold()
                 
-                Text("Edbot is a pianist who likes to mimic humans!")
+                Text("Edbot is a robotic pianist who is capable of playing known songs, as well as mimicking humans!")
                     .font(.system(size: 25))
                 
                 Spacer()
@@ -33,7 +33,7 @@ struct InformationView: View {
                 )
                     .onTapGesture {
                         withAnimation {
-                            currentView = .chooseMode
+                            currentView = .tappableDemo
                         }
                     }
             }

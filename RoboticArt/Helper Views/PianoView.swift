@@ -10,11 +10,13 @@ import SwiftUI
 struct PianoView: View {
     @StateObject var serialPortViewModel = SerialPortViewModel()
     
-    private var notes: [NoteType] = NoteType.allCases
+    var notes: [NoteType] = NoteType.allCases
+    
+    let title: String
     
     var body: some View {
         VStack {
-            Text("🎵 Play some tunes! 🎵")
+            Text(title)
                 .font(.system(size: 60))
                 .bold()
                 .padding()
@@ -38,11 +40,5 @@ struct PianoView: View {
         }
         .padding()
         .cornerRadius(8)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        PianoView()
     }
 }

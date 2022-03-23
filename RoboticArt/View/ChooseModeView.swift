@@ -13,7 +13,7 @@ struct ChooseModeView: View {
     var body: some View {
         HStack {
             VStack(alignment: .center, spacing: 25) {
-                Text("Choose how you'd like to interact with Ed!")
+                Text("Choose how you'd like to interact with Edbot!")
                     .font(.system(size: 60))
                     .bold()
                     .padding(.bottom, 40)

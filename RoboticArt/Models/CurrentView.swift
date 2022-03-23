@@ -10,6 +10,9 @@ import Foundation
 enum CurrentView {
     case splashScreen
     case information
+    case swipingAcrossKeyboardDemo
+    case multipleKeysAtOnceDemo
+    case tappableDemo
     case chooseMode
     case machineVisionMode
     case chooseSong

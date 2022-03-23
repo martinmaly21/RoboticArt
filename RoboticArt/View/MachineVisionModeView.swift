@@ -18,7 +18,7 @@ struct MachineVisionModeView: View {
         ZStack(alignment: .topLeading) {
             CameraFeedView()
             
-            PianoView()
+            PianoView(title: "🎵 Play some tunes! 🎵")
             
             HStack {
                 HStack {

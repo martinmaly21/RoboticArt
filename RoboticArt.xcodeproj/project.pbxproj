@@ -38,6 +38,9 @@
 		50F7232427EA9F01008EF973 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7232327EA9F01008EF973 /* Song.swift */; };
 		50F7232627EAA8C6008EF973 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7232527EAA8C6008EF973 /* String.swift */; };
 		50F7232927EAB66C008EF973 /* MIDIModePiano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7232827EAB66C008EF973 /* MIDIModePiano.swift */; };
+		50F7233D27EAEE0E008EF973 /* GlissandoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7233C27EAEE0E008EF973 /* GlissandoView.swift */; };
+		50F7233F27EAF0F6008EF973 /* TappableDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7233E27EAF0F6008EF973 /* TappableDemo.swift */; };
+		50F7234127EAF2BD008EF973 /* MultipleKeysAtOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7234027EAF2BD008EF973 /* MultipleKeysAtOnce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,9 @@
 		50F7232327EA9F01008EF973 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		50F7232527EAA8C6008EF973 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		50F7232827EAB66C008EF973 /* MIDIModePiano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIModePiano.swift; sourceTree = "<group>"; };
+		50F7233C27EAEE0E008EF973 /* GlissandoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlissandoView.swift; sourceTree = "<group>"; };
+		50F7233E27EAF0F6008EF973 /* TappableDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableDemo.swift; sourceTree = "<group>"; };
+		50F7234027EAF2BD008EF973 /* MultipleKeysAtOnce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleKeysAtOnce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,9 @@
 				50C3616427DD19B900E42B29 /* MachineVisionModeView.swift */,
 				50C3616627DD1A4A00E42B29 /* MIDIModeView.swift */,
 				50F7232827EAB66C008EF973 /* MIDIModePiano.swift */,
+				50F7233C27EAEE0E008EF973 /* GlissandoView.swift */,
+				50F7233E27EAF0F6008EF973 /* TappableDemo.swift */,
+				50F7234027EAF2BD008EF973 /* MultipleKeysAtOnce.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 				50C3615627DCF5A500E42B29 /* RootView.swift in Sources */,
 				50C3615327DCE99300E42B29 /* SerialPortViewModel.swift in Sources */,
 				5070016A27D8269F008ACB9C /* RoboticArtApp.swift in Sources */,
+				50F7234127EAF2BD008EF973 /* MultipleKeysAtOnce.swift in Sources */,
 				50F26B5E27E9752300453FF7 /* Task.swift in Sources */,
 				50C3617827DE9F1500E42B29 /* CameraFeedView.swift in Sources */,
 				50C3615E27DD17C600E42B29 /* CurrentView.swift in Sources */,
@@ -297,6 +307,8 @@
 				50F7232927EAB66C008EF973 /* MIDIModePiano.swift in Sources */,
 				50C3618327DEA3A800E42B29 /* CGImage.swift in Sources */,
 				50C3616B27DD277A00E42B29 /* WhitePianoKeyView.swift in Sources */,
+				50F7233D27EAEE0E008EF973 /* GlissandoView.swift in Sources */,
+				50F7233F27EAF0F6008EF973 /* TappableDemo.swift in Sources */,
 				50C3616E27DD295400E42B29 /* View.swift in Sources */,
 				50C3617F27DEA2C500E42B29 /* FrameManager.swift in Sources */,
 				50F7232427EA9F01008EF973 /* Song.swift in Sources */,

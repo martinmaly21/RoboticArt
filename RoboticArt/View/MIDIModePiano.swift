@@ -15,7 +15,7 @@ struct MIDIModePiano: View {
     let song: Song
     
     var body: some View {
-        PianoView()
+        PianoView(title: "\(song.name) by \(song.artist)")
             .onAppear {
                 Task {
                     await playSong()

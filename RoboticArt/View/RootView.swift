@@ -25,6 +25,12 @@ struct RootView: View {
                 MIDIModeView(currentView: $currentView)
             case .midiModePiano(let song):
                 MIDIModePiano(currentView: $currentView, song: song)
+            case .swipingAcrossKeyboardDemo:
+                GlissandoView(currentView: $currentView)
+            case .multipleKeysAtOnceDemo:
+                MultipleKeysAtOnce(currentView: $currentView)
+            case .tappableDemo:
+                TappableDemo(currentView: $currentView)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
