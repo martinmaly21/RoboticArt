@@ -34,7 +34,7 @@ struct MultipleKeysAtOnce: View {
                         .background(.thickMaterial)
                         .cornerRadius(20)
                         .onTapGesture {
-                            serialPortViewModel.sendData("1000000000000000")
+                            serialPortViewModel.sendData("0000000010000000")
                         }
                     
                     Text("2 Keys")
@@ -43,7 +43,7 @@ struct MultipleKeysAtOnce: View {
                         .background(.thickMaterial)
                         .cornerRadius(20)
                         .onTapGesture {
-                            serialPortViewModel.sendData("1100000000000000")
+                            serialPortViewModel.sendData("0000000011000000")
                         }
                     
                     Text("3 Keys")
@@ -52,7 +52,7 @@ struct MultipleKeysAtOnce: View {
                         .background(.thickMaterial)
                         .cornerRadius(20)
                         .onTapGesture {
-                            serialPortViewModel.sendData("1110000000000000")
+                            serialPortViewModel.sendData("0000000011100000")
                         }
                     
                     Text("4 Keys")
@@ -61,7 +61,7 @@ struct MultipleKeysAtOnce: View {
                         .background(.thickMaterial)
                         .cornerRadius(20)
                         .onTapGesture {
-                            serialPortViewModel.sendData("1111000000000000")
+                            serialPortViewModel.sendData("0000000011110000")
                         }
                 }
                 
