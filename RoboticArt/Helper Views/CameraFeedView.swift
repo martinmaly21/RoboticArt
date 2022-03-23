@@ -25,20 +25,11 @@ struct CameraFeedView: View {
                     .clipped()
                     .cornerRadius(20)
                   
-                  Path { path in
-                      path.move(to: CGPoint(x: 200, y: 100))
-                      path.addLine(to: CGPoint(x: 100, y: 300))
-                      path.addLine(to: CGPoint(x: 300, y: 300))
-                      path.addLine(to: CGPoint(x: 200, y: 100))
-                  }
-                  .fill(.blue)
-                  
                   //TODO:
                   if let indexTip = machineVisionViewModel.indexTipLocation {
-                      
                       Circle()
                           .frame(width: 20, height: 20)
-                          
+                      
                           .position(
                             x: geometry.size.width - (indexTip.x * geometry.size.width),
                             y: indexTip.y * geometry.size.height

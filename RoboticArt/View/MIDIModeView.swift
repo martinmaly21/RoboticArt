@@ -42,6 +42,25 @@ struct MIDIModeView: View {
     
     var body: some View {
         VStack(spacing: 20) {
+            HStack {
+                Image(systemName: "chevron.left")
+                    .resizable()
+                    .frame(width: 25, height: 40)
+                    .foregroundColor(Color.white)
+                
+                Text("Back")
+                    .aspectRatio(contentMode: .fill)
+                    .font(.system(size: 30))
+                    .frame(width: 150, height: 40)
+                    .onTapGesture {
+                        withAnimation {
+                            currentView = .chooseMode
+                        }
+                    }
+                    .padding(.leading, -20)
+                
+                Spacer()
+            }
             Text("Choose song to play!")
                 .font(.system(size: 60))
                 .bold()

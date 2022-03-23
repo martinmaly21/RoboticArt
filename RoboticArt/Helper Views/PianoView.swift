@@ -18,7 +18,7 @@ struct PianoView: View {
                 .font(.system(size: 60))
                 .bold()
                 .padding()
-                .background(Color.black)
+                .background(.thinMaterial)
                 .cornerRadius(18)
                 .padding(.bottom, 150)
                             
