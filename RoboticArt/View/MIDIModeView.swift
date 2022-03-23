@@ -52,14 +52,15 @@ struct MIDIModeView: View {
                     .aspectRatio(contentMode: .fill)
                     .font(.system(size: 30))
                     .frame(width: 150, height: 40)
-                    .onTapGesture {
-                        withAnimation {
-                            currentView = .chooseMode
-                        }
-                    }
                     .padding(.leading, -20)
                 
                 Spacer()
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                withAnimation {
+                    currentView = .chooseMode
+                }
             }
             Text("Choose song to play!")
                 .font(.system(size: 60))
