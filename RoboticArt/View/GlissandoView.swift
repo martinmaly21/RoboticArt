@@ -66,7 +66,7 @@ struct GlissandoView: View {
     }
     
     func glissando() async {
-        let timeForEachNote = 0.2
+        let timeForEachNote = 0.1
         
         //up
         await playNote(noteType: .c1, for: timeForEachNote)
