@@ -31,12 +31,14 @@ struct MIDIModePiano: View {
             await twinkleTwinkleLittleStar()
         case "Jingle Bells":
             await jingleBells()
+        case "Levels (intro)":
+            await levels()
         default:
             fatalError()
         }
         
         //reset all fingers to off position
-        await liftFingers()
+        await liftFingers(for: 1)
         
         withAnimation {
             currentView = .chooseSong
@@ -395,6 +397,69 @@ struct MIDIModePiano: View {
         }
     }
     
+    func levels() async {
+        //play loop three times
+        for _ in 0..<3 {
+            //first 3
+            await playNote(noteType: [.g1, .c3, .g2], for: 0.5)
+            
+            await liftFingers(for: 0.1)
+            
+            await playNote(noteType: [.g1, .c3, .g2], for: 0.5)
+            
+            await liftFingers(for: 0.1)
+            
+            await playNote(noteType: [.g1, .c3, .g2], for: 0.5)
+            
+            await liftFingers(for: 0.7)
+            
+            //next 4
+            await playNote(noteType: [.e1, .b1, .b2], for: 0.6)
+            
+            await liftFingers(for: 0.1)
+            
+            await playNote(noteType: [.e1, .b1, .b2], for: 0.6)
+            
+            await liftFingers(for: 0.1)
+            
+            await playNote(noteType: [.e1, .b1, .b2], for: 0.6)
+            
+            await liftFingers(for: 0.1)
+            
+            await playNote(noteType: [.e1, .b1, .b2], for: 0.6)
+            
+            await liftFingers(for: 0.1)
+            
+            //next three
+            await playNote(noteType: [.g1, .c2, .g2], for: 0.6)
+            
+            await liftFingers(for: 0.1)
+            await playNote(noteType: [.g1, .c2, .g2], for: 0.6)
+            
+            await liftFingers(for: 0.1)
+            await playNote(noteType: [.g1, .c2, .g2], for: 0.6)
+            
+            await liftFingers(for: 0.1)
+
+            //next 1
+            await playNote(noteType: [.e1, .a1, .e2], for: 0.3)
+            await playNote(noteType: [.e1, .e2], for: 0.2)
+            
+            await liftFingers(for: 0.8)
+            
+            //final 3
+            await playNote(noteType: [.e1, .a1, .e2], for: 0.5)
+            await liftFingers(for: 0.1)
+            
+            await playNote(noteType: [.e1, .a1, .e2], for: 0.5)
+            await liftFingers(for: 0.1)
+            
+            await playNote(noteType: [.e1, .a1, .e2], for: 0.5)
+            await liftFingers(for: 0.1)
+        }
+
+    }
+    
     func playNote(noteType: NoteType, for seconds: Double) async {
         serialPortViewModel.sendData(noteType.binaryNote)
         await Task.sleep(seconds: seconds)
@@ -413,8 +478,8 @@ struct MIDIModePiano: View {
         await Task.sleep(seconds: seconds)
     }
     
-    func liftFingers() async {
+    func liftFingers(for time: Double) async {
         serialPortViewModel.sendData(NoteType.off.binaryNote)
-        await Task.sleep(seconds: 1)
+        await Task.sleep(seconds: time)
     }
 }
