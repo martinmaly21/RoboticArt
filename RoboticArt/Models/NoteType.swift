@@ -26,6 +26,8 @@ enum NoteType: String, CaseIterable {
     case b2
     case c4
     
+    case off
+    
     var parsedNote: String {
         switch self {
         case .c1, .c2, .c3, .c4:
@@ -42,6 +44,8 @@ enum NoteType: String, CaseIterable {
             return "A"
         case .b1, .b2:
             return "B"
+        case .off:
+            return ""
         }
     }
     
@@ -79,6 +83,8 @@ enum NoteType: String, CaseIterable {
             return "0000000000000010"
         case .c4:
             return "0000000000000001"
+        case .off:
+            return "0000000000000000"
         }
     }
 }

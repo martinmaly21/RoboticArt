@@ -25,12 +25,12 @@ struct PianoView: View {
             HStack(spacing: 100) {
                 PianoOctaveView(
                     octaveName: "Octave 1",
-                    notes: Array(notes.prefix(notes.count / 2))
+                    notes: [.c1, .d1, .e1, .f1, .g1, .a1, .b1, .c2]
                 )
 
                 PianoOctaveView(
                     octaveName: "Octave 2",
-                    notes: Array(notes.suffix(notes.count / 2))
+                    notes: [.c3, .d2, .e2, .f2, .g2, .a2, .b2, .c4]
                 )
             }
             .padding()

@@ -33,6 +33,7 @@
 		50C3617F27DEA2C500E42B29 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3617E27DEA2C500E42B29 /* FrameManager.swift */; };
 		50C3618127DEA34500E42B29 /* MachineVisionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3618027DEA34500E42B29 /* MachineVisionViewModel.swift */; };
 		50C3618327DEA3A800E42B29 /* CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3618227DEA3A800E42B29 /* CGImage.swift */; };
+		50F26B5E27E9752300453FF7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F26B5D27E9752300453FF7 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		50C3617E27DEA2C500E42B29 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
 		50C3618027DEA34500E42B29 /* MachineVisionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineVisionViewModel.swift; sourceTree = "<group>"; };
 		50C3618227DEA3A800E42B29 /* CGImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImage.swift; sourceTree = "<group>"; };
+		50F26B5D27E9752300453FF7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				50C3616D27DD295400E42B29 /* View.swift */,
 				50C3618227DEA3A800E42B29 /* CGImage.swift */,
+				50F26B5D27E9752300453FF7 /* Task.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				50C3615627DCF5A500E42B29 /* RootView.swift in Sources */,
 				50C3615327DCE99300E42B29 /* SerialPortViewModel.swift in Sources */,
 				5070016A27D8269F008ACB9C /* RoboticArtApp.swift in Sources */,
+				50F26B5E27E9752300453FF7 /* Task.swift in Sources */,
 				50C3617827DE9F1500E42B29 /* CameraFeedView.swift in Sources */,
 				50C3615E27DD17C600E42B29 /* CurrentView.swift in Sources */,
 				50C3618327DEA3A800E42B29 /* CGImage.swift in Sources */,
