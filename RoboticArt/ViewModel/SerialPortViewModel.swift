@@ -13,11 +13,13 @@ class SerialPortViewModel: NSObject, ObservableObject {
     //Declare global ORSSerialPortManager that can be used throughout app
     var manager = ORSSerialPortManager.shared()
     
-    let port: ORSSerialPort
+    let port: ORSSerialPort!
     
     override init() {
         guard let arduinoPort = manager.availablePorts.first(where: { $0.name.contains("usbmodem")}) else {
-            fatalError("Could not get arduino port")
+            port = ORSSerialPort(path: "")
+            super.init()
+            return
         }
         
         self.port = arduinoPort

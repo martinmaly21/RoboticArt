@@ -13,124 +13,165 @@ struct MIDIModeView: View {
     @Binding var currentView: CurrentView
     @State var messageText: String = ""
     
+    let songs: [Song] = [
+        Song(
+            name: "Drunken Sailor",
+            artist: "Irish Rovers",
+            image: NSImage(named: "DrunkenSailor")!
+        ),
+    
+    ]
+    
     var body: some View {
-        VStack {
-            Button(
-                action: {
-                    
-                    Task {
-                        await playNote(noteType: .c1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .c1, for: 0.5)
-
-                        await playNote(noteType: .g1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .g1, for: 0.5)
-                        
-                        await playNote(noteType: .a1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .a1, for: 0.5)
-                        
-                        await playNote(noteType: .g1, for: 0.5)
-                        
-                        await playNote(noteType: .f1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .f1, for: 0.5)
-                        
-                        await playNote(noteType: .e1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .e1, for: 0.5)
-                        
-                        await playNote(noteType: .d1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .d1, for: 0.5)
-                        
-                        await playNote(noteType: .c1, for: 0.5)
-                        
-                        
-                        //
-                        await playNote(noteType: .g1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .g1, for: 0.5)
-                        
-                        await playNote(noteType: .f1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .f1, for: 0.5)
-                        
-                        await playNote(noteType: .e1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .e1, for: 0.5)
-                        
-                        await playNote(noteType: .d1, for: 0.5)
-                        
-                        //
-                        await playNote(noteType: .g1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .g1, for: 0.5)
-                        
-                        await playNote(noteType: .f1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .f1, for: 0.5)
-                        
-                        await playNote(noteType: .e1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .e1, for: 0.5)
-                        
-                        await playNote(noteType: .d1, for: 0.5)
-                        
-                        //
-                        await playNote(noteType: .c1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .c1, for: 0.5)
-
-                        await playNote(noteType: .g1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .g1, for: 0.5)
-                        
-                        await playNote(noteType: .a1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .a1, for: 0.5)
-                        
-                        await playNote(noteType: .g1, for: 0.5)
-                        
-                        await playNote(noteType: .f1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .f1, for: 0.5)
-                        
-                        await playNote(noteType: .e1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .e1, for: 0.5)
-                        
-                        await playNote(noteType: .d1, for: 0.5)
-                        await liftFingers()
-                        await playNote(noteType: .d1, for: 0.5)
-                        
-                        await playNote(noteType: .c1, for: 0.5)
-                    }
-
-                },
-                label: {
-                    Text("Play test")
+        VStack(spacing: 20) {
+            Text("Choose song to play!")
+                .font(.system(size: 60))
+                .bold()
+                .padding(40)
+            
+            ForEach(
+                songs,
+                id: \.self,
+                content: { song in
+                    MIDISongCell(song: song)
+                        .onTapGesture {
+                            Task {
+                                await playSong(song)
+                            }
+                        }
                 }
             )
             
-            
-            TextField(
-                    "Data to send arduino",
-                    text: $messageText
-                )
-            
-            Button(
-                action: {
-                    serialPortViewModel.sendData(messageText)
-                },
-                label: {
-                    
-                    Text("Send!")
-                }
-            )
+            Spacer()
         }
         .padding()
+    }
+    
+    
+    func playSong(_ song: Song) async {
+        switch song.name {
+        case "Drunken Sailor":
+            await drunkenSailor()
+            
+        case "Twinkle Twinkle Little Star":
+            await twinkleTwinkleLittleStar()
+            
+        default:
+            fatalError()
+        }
+    }
+    
+    func drunkenSailor() async {
+        await playNote(noteType: [.a2,.d1,.f1], for: 0.1)
+
+        // keep left hand on
+        await playNote(noteType: [.d1,.f1], for: 0.385)
+
+        await playNote(noteType: [.a2,.d1,.f1], for: 0.1)
+
+        // keep left hand on
+        await playNote(noteType: [.d1,.f1], for: 0.185)
+
+        await playNote(noteType: [.a2,.d1,.f1], for: 0.095)
+        // keep left hand on
+        await playNote(noteType: [.d1,.f1], for: 0.185)
+
+        await playNote(noteType: [.a2,.d1,.f1], for: 0.1)
+
+        // keep left hand on
+        await playNote(noteType: [.d1,.f1], for: 0.185)
+
+        await playNote(noteType: [.a2,.d1,.f1], for: 0.1)
+    }
+    
+    func twinkleTwinkleLittleStar() async {
+        await playNote(noteType: .c1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .c1, for: 0.5)
+
+        await playNote(noteType: .g1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .g1, for: 0.5)
+        
+        await playNote(noteType: .a1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .a1, for: 0.5)
+        
+        await playNote(noteType: .g1, for: 0.5)
+        
+        await playNote(noteType: .f1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .f1, for: 0.5)
+        
+        await playNote(noteType: .e1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .e1, for: 0.5)
+        
+        await playNote(noteType: .d1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .d1, for: 0.5)
+        
+        await playNote(noteType: .c1, for: 0.5)
+        
+        
+        //
+        await playNote(noteType: .g1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .g1, for: 0.5)
+        
+        await playNote(noteType: .f1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .f1, for: 0.5)
+        
+        await playNote(noteType: .e1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .e1, for: 0.5)
+        
+        await playNote(noteType: .d1, for: 0.5)
+        
+        //
+        await playNote(noteType: .g1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .g1, for: 0.5)
+        
+        await playNote(noteType: .f1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .f1, for: 0.5)
+        
+        await playNote(noteType: .e1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .e1, for: 0.5)
+        
+        await playNote(noteType: .d1, for: 0.5)
+        
+        //
+        await playNote(noteType: .c1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .c1, for: 0.5)
+
+        await playNote(noteType: .g1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .g1, for: 0.5)
+        
+        await playNote(noteType: .a1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .a1, for: 0.5)
+        
+        await playNote(noteType: .g1, for: 0.5)
+        
+        await playNote(noteType: .f1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .f1, for: 0.5)
+        
+        await playNote(noteType: .e1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .e1, for: 0.5)
+        
+        await playNote(noteType: .d1, for: 0.5)
+        await liftFingers()
+        await playNote(noteType: .d1, for: 0.5)
+        
+        await playNote(noteType: .c1, for: 0.5)
     }
     
     func playNote(noteType: NoteType, for seconds: Double) async {

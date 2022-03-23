@@ -34,6 +34,8 @@
 		50C3618127DEA34500E42B29 /* MachineVisionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3618027DEA34500E42B29 /* MachineVisionViewModel.swift */; };
 		50C3618327DEA3A800E42B29 /* CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C3618227DEA3A800E42B29 /* CGImage.swift */; };
 		50F26B5E27E9752300453FF7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F26B5D27E9752300453FF7 /* Task.swift */; };
+		50F7232227EA9EED008EF973 /* MIDISongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7232127EA9EED008EF973 /* MIDISongCell.swift */; };
+		50F7232427EA9F01008EF973 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F7232327EA9F01008EF973 /* Song.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		50C3618027DEA34500E42B29 /* MachineVisionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineVisionViewModel.swift; sourceTree = "<group>"; };
 		50C3618227DEA3A800E42B29 /* CGImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImage.swift; sourceTree = "<group>"; };
 		50F26B5D27E9752300453FF7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		50F7232127EA9EED008EF973 /* MIDISongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDISongCell.swift; sourceTree = "<group>"; };
+		50F7232327EA9F01008EF973 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 				50C3616A27DD277A00E42B29 /* WhitePianoKeyView.swift */,
 				50C3617327DD401B00E42B29 /* BlackPianoKeyView.swift */,
 				50C3617727DE9F1500E42B29 /* CameraFeedView.swift */,
+				50F7232127EA9EED008EF973 /* MIDISongCell.swift */,
 			);
 			path = "Helper Views";
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				50C3615D27DD17C600E42B29 /* CurrentView.swift */,
 				50C3616F27DD2BB800E42B29 /* NoteType.swift */,
 				50C3617C27DEA11500E42B29 /* CameraError.swift */,
+				50F7232327EA9F01008EF973 /* Song.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,10 +286,12 @@
 				50F26B5E27E9752300453FF7 /* Task.swift in Sources */,
 				50C3617827DE9F1500E42B29 /* CameraFeedView.swift in Sources */,
 				50C3615E27DD17C600E42B29 /* CurrentView.swift in Sources */,
+				50F7232227EA9EED008EF973 /* MIDISongCell.swift in Sources */,
 				50C3618327DEA3A800E42B29 /* CGImage.swift in Sources */,
 				50C3616B27DD277A00E42B29 /* WhitePianoKeyView.swift in Sources */,
 				50C3616E27DD295400E42B29 /* View.swift in Sources */,
 				50C3617F27DEA2C500E42B29 /* FrameManager.swift in Sources */,
+				50F7232427EA9F01008EF973 /* Song.swift in Sources */,
 				50C3616327DD199A00E42B29 /* ChooseModeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
