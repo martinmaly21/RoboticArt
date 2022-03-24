@@ -29,8 +29,8 @@ struct MIDIModePiano: View {
             await drunkenSailor()
         case "Twinkle Twinkle Little Star":
             await twinkleTwinkleLittleStar()
-        case "Jingle Bells":
-            await jingleBells()
+        case "Mary had a little lamb":
+            await maryHadALittleLamb()
         case "Levels (intro)":
             await levels()
         default:
@@ -185,130 +185,212 @@ struct MIDIModePiano: View {
 
     }
     
+    func maryHadALittleLamb() async {
+        await playNote(noteType: .off, for: 0.5)
+
+        // ma
+        await playNote(noteType: .e2, for: 0.3)
+        // ry
+        await playNote(noteType: .d2, for: 0.3)
+        // had
+        await playNote(noteType: .c3, for: 0.3)
+        // a
+        await playNote(noteType: .d2, for: 0.3)
+        // lit
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // tle
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // lamb
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // lit
+        await playNote(noteType: .d2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // tle
+        await playNote(noteType: .d2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // lamb
+        await playNote(noteType: .d2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // lit
+        await playNote(noteType: .e2, for: 0.3)
+        // tle
+        await playNote(noteType: .g2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // lamb
+        await playNote(noteType: .g2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // ma
+        await playNote(noteType: .e2, for: 0.3)
+        // ry
+        await playNote(noteType: .d2, for: 0.3)
+        // had
+        await playNote(noteType: .c3, for: 0.3)
+        // a
+        await playNote(noteType: .d2, for: 0.3)
+        // lit
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // tle
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // lamb
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // whose
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // fleece
+        await playNote(noteType: .d2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // was
+        await playNote(noteType: .d2, for: 0.2)
+        await playNote(noteType: .d2, for: 0.1)
+        // white
+        await playNote(noteType: .e2, for: 0.3)
+        // as
+        await playNote(noteType: .d2, for: 0.3)
+        // snow
+        await playNote(noteType: .c3, for: 0.3)
+    }
+    
     func twinkleTwinkleLittleStar() async {
-        var noteLength: Double
-        
-        noteLength = 0.1
-        
-        var offLength: Double
-        
-        offLength = 0.02
-        
-        //twinkle
-        await playNote(noteType: .c3, for: noteLength)
-        await playNote(noteType: .off, for: noteLength)
-        await playNote(noteType: .c3, for: noteLength)
-        
-        //twinkle
-        await playNote(noteType: .g2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .g2, for: noteLength)
-        
-        //little
-        await playNote(noteType: .a2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .a2, for: noteLength)
-        
-        //Star
-        await playNote(noteType: .g2, for: 2*noteLength) // end of line 1
-        
-        //how
-        await playNote(noteType: .f2, for:noteLength )
-        await playNote(noteType: .off, for: offLength)
-        //I
-        await playNote(noteType: .f2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        
-        //wonder
-        await playNote(noteType: .e2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .e2, for: noteLength)
-        
-        //what
-        await playNote(noteType: .d2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        //you
-        await playNote(noteType: .d2, for: noteLength)
-        
-        //are
-        await playNote(noteType: .c3, for: 2*noteLength)    //end of line 2
-        
-        //up ab
-        await playNote(noteType: .g2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .g2, for: noteLength)
-        
-        //ove the
-        await playNote(noteType: .f2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .f2, for: noteLength)
-        
-        //world so
-        await playNote(noteType: .e2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .e2, for: noteLength)
-        
-        //Highhhhh
-        await playNote(noteType: .d2, for: 2*noteLength)    //end of line 3
-        
-        // like a
-        await playNote(noteType: .g2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .g2, for: noteLength)
-        
-        //diamond
-        await playNote(noteType: .f2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .f2, for: noteLength)
-        
-        
-        //in the
-        await playNote(noteType: .e2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .e2, for: noteLength)
-        
-        //sky
-        await playNote(noteType: .d2, for: 2*noteLength)    //end of line 4
-        
-        //twinkle
-        await playNote(noteType: .c3, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .c3, for: noteLength)
-        
-        //twinkle
-        await playNote(noteType: .g2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .g2, for: noteLength)
-        
-        //little
-        await playNote(noteType: .a2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .a2, for: noteLength)
-        
-        //staaar
-        await playNote(noteType: .g2, for: 2*noteLength) // end of line 5
-        
-        //how  i
-        await playNote(noteType: .f2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .f2, for: noteLength)
-        
-        
-        // wonder
-        await playNote(noteType: .e2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .e2, for: noteLength)
-        
-        
-        //what you
-        await playNote(noteType: .d2, for: noteLength)
-        await playNote(noteType: .off, for: offLength)
-        await playNote(noteType: .d2, for: noteLength)
-        
-        
-        //are
-        await playNote(noteType: .c3, for: 2*noteLength) //end of line 6
-        
+        await playNote(noteType: .off, for: 0.5)
+
+        // twin
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // kle
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // twin
+        await playNote(noteType: .g2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // kle
+        await playNote(noteType: .g2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // lit
+        await playNote(noteType: .a2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // tle
+        await playNote(noteType: .a2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // star
+        await playNote(noteType: .g2, for: 0.4)
+
+        // how
+        await playNote(noteType: .f2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // I
+        await playNote(noteType: .f2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // won
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // der
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // what
+        await playNote(noteType: .d2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // you
+        await playNote(noteType: .d2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // are
+        await playNote(noteType: .c3, for: 0.4)
+
+        // up
+        await playNote(noteType: .g2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // a
+        await playNote(noteType: .g2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // bove
+        await playNote(noteType: .f2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // the
+        await playNote(noteType: .f2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // world
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // so
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // high
+        await playNote(noteType: .d2, for: 0.4)
+
+        // like
+        await playNote(noteType: .g2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // a
+        await playNote(noteType: .g2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // dia
+        await playNote(noteType: .f2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // mond
+        await playNote(noteType: .f2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // in
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // the
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // sky
+        await playNote(noteType: .d2, for: 0.4)
+
+        // twin
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // kle
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // twin
+        await playNote(noteType: .g2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // kle
+        await playNote(noteType: .g2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // lit
+        await playNote(noteType: .a2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // tle
+        await playNote(noteType: .a2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // star
+        await playNote(noteType: .g2, for: 0.4)
+
+        // how
+        await playNote(noteType: .f2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // I
+        await playNote(noteType: .f2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // won
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // der
+        await playNote(noteType: .e2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // what
+        await playNote(noteType: .d2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // you
+        await playNote(noteType: .d2, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // are
+        await playNote(noteType: .c3, for: 0.4)
+
+        // c chord
+        await playNote(noteType: .off, for: 0.3)
+        await playNote(noteType: [.c3,.e2,.g2], for: 0.35)
+        await playNote(noteType: .off, for: 0.4)
+
+
     }
     
     func jingleBells() async {
