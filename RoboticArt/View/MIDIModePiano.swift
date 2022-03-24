@@ -31,6 +31,8 @@ struct MIDIModePiano: View {
             await twinkleTwinkleLittleStar()
         case "Mary had a little lamb":
             await maryHadALittleLamb()
+        case "Sweet but Psycho":
+            await sweetButPsycho()
         case "Levels (intro)":
             await levels()
         default:
@@ -43,6 +45,74 @@ struct MIDIModePiano: View {
         withAnimation {
             currentView = .chooseSong
         }
+    }
+    
+    func sweetButPsycho() async {
+        await playNote(noteType: .off, for: 0.5)
+
+        // oh  -
+        await playNote(noteType: .c4, for: 0.72)
+        await playNote(noteType: .off, for: 0.08)
+        // shes - c
+        await playNote(noteType: .c4, for: 0.72)
+        await playNote(noteType: .off, for: 0.08)
+        // sweet - c
+        await playNote(noteType: .c4, for: 0.4)
+        // but - b
+        await playNote(noteType: .b2, for: 0.4)
+        // a - c
+        await playNote(noteType: .c4, for: 0.8)
+        // psy - b
+        await playNote(noteType: .b2, for: 0.8)
+        // cho - g
+        await playNote(noteType: .g2, for: 0.32)
+        await playNote(noteType: .off, for: 0.08)
+        // a - g
+        await playNote(noteType: .g2, for: 0.32)
+        await playNote(noteType: .off, for: 0.08)
+        // lit - g
+        await playNote(noteType: .g2, for: 0.32)
+        await playNote(noteType: .off, for: 0.08)
+        // tle - a
+        await playNote(noteType: .a2, for: 0.4)
+        // bit - b
+        await playNote(noteType: .b2, for: 0.8)
+        // psy - c4
+        await playNote(noteType: .c4, for: 0.8)
+        // cho - a
+        await playNote(noteType: .a2, for: 0.32)
+        await playNote(noteType: .off, for: 0.08)
+        // at - a
+        await playNote(noteType: .a2, for: 0.32)
+        await playNote(noteType: .off, for: 0.08)
+        // night - b
+        await playNote(noteType: .b2, for: 0.4)
+        // shes - a
+        await playNote(noteType: .a2, for: 0.4)
+        // scream - b
+        await playNote(noteType: .b2, for: 0.4)
+        // in - a
+        await playNote(noteType: .a2, for: 0.4)
+        // im - e
+        await playNote(noteType: .e2, for: 0.4)
+        // ma - b
+        await playNote(noteType: .b2, for: 0.32)
+        await playNote(noteType: .off, for: 0.08)
+        // ma - b
+        await playNote(noteType: .b2, for: 0.72)
+        await playNote(noteType: .off, for: 0.08)
+        // out - b
+        await playNote(noteType: .b2, for: 0.4)
+        // my - a
+        await playNote(noteType: .a2, for: 0.32)
+        await playNote(noteType: .off, for: 0.08)
+        // mind - a
+        await playNote(noteType: .g2, for: 0.4)
+        // __ - g
+        await playNote(noteType: .g2, for: 0.4)
+
+
+        await playNote(noteType: .off, for: 0.03)
     }
     
     func drunkenSailor() async {

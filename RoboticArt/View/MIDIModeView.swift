@@ -33,6 +33,12 @@ struct MIDIModeView: View {
         ),
         
         Song(
+            name: "Sweet but Psycho",
+            artist: "Ava Max",
+            image: NSImage(named: "psycho")!
+        ),
+    
+        Song(
             name: "Levels (intro)",
             artist: "Avicii",
             image: NSImage(named: "Levels")!
