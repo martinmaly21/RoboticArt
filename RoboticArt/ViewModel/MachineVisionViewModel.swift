@@ -10,11 +10,17 @@ import CoreImage
 class MachineVisionViewModel: ObservableObject {
     @Published var frame: CGImage?
     
-    @Published var thumbFingerLocations: [CGPoint]?
-    @Published var indexFingerLocations: [CGPoint]?
-    @Published var middleFingerLocations: [CGPoint]?
-    @Published var ringFingerLocations: [CGPoint]?
-    @Published var littleFingerLocations: [CGPoint]?
+    @Published var leftThumbFingerLocations: [CGPoint]?
+    @Published var leftIndexFingerLocations: [CGPoint]?
+    @Published var leftMiddleFingerLocations: [CGPoint]?
+    @Published var leftRingFingerLocations: [CGPoint]?
+    @Published var leftLittleFingerLocations: [CGPoint]?
+    
+    @Published var rightThumbFingerLocations: [CGPoint]?
+    @Published var rightIndexFingerLocations: [CGPoint]?
+    @Published var rightMiddleFingerLocations: [CGPoint]?
+    @Published var rightRingFingerLocations: [CGPoint]?
+    @Published var rightLittleFingerLocations: [CGPoint]?
     
     private let frameManager = FrameManager.shared
     
@@ -31,39 +37,77 @@ class MachineVisionViewModel: ObservableObject {
             .assign(to: &$frame)
         
         
-        frameManager.$thumbFingerLocations
+        //left hand
+        frameManager.$leftThumbFingerLocations
             .receive(on: RunLoop.main)
             .compactMap { value in
                 return value
             }
-            .assign(to: &$thumbFingerLocations)
+            .assign(to: &$leftThumbFingerLocations)
         
-        frameManager.$indexFingerLocations
+        frameManager.$leftIndexFingerLocations
             .receive(on: RunLoop.main)
             .compactMap { value in
                 return value
             }
-            .assign(to: &$indexFingerLocations)
+            .assign(to: &$leftIndexFingerLocations)
         
-        frameManager.$middleFingerLocations
+        frameManager.$leftMiddleFingerLocations
             .receive(on: RunLoop.main)
             .compactMap { value in
                 return value
             }
-            .assign(to: &$middleFingerLocations)
+            .assign(to: &$leftMiddleFingerLocations)
         
-        frameManager.$ringFingerLocations
+        frameManager.$leftRingFingerLocations
             .receive(on: RunLoop.main)
             .compactMap { value in
                 return value
             }
-            .assign(to: &$ringFingerLocations)
+            .assign(to: &$leftRingFingerLocations)
         
-        frameManager.$littleFingerLocations
+        frameManager.$leftLittleFingerLocations
             .receive(on: RunLoop.main)
             .compactMap { value in
                 return value
             }
-            .assign(to: &$littleFingerLocations)
+            .assign(to: &$leftLittleFingerLocations)
+        
+        
+        //right hand
+        frameManager.$rightThumbFingerLocations
+            .receive(on: RunLoop.main)
+            .compactMap { value in
+                return value
+            }
+            .assign(to: &$rightThumbFingerLocations)
+        
+        frameManager.$rightIndexFingerLocations
+            .receive(on: RunLoop.main)
+            .compactMap { value in
+                return value
+            }
+            .assign(to: &$rightIndexFingerLocations)
+        
+        frameManager.$rightMiddleFingerLocations
+            .receive(on: RunLoop.main)
+            .compactMap { value in
+                return value
+            }
+            .assign(to: &$rightMiddleFingerLocations)
+        
+        frameManager.$rightRingFingerLocations
+            .receive(on: RunLoop.main)
+            .compactMap { value in
+                return value
+            }
+            .assign(to: &$rightRingFingerLocations)
+        
+        frameManager.$rightLittleFingerLocations
+            .receive(on: RunLoop.main)
+            .compactMap { value in
+                return value
+            }
+            .assign(to: &$rightLittleFingerLocations)
     }
 }

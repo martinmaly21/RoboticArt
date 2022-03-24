@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		506F0DA527EC229600683FAE /* LeftHandPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F0DA427EC229600683FAE /* LeftHandPoints.swift */; };
+		506F0DA727EC22A100683FAE /* RightHandPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F0DA627EC22A100683FAE /* RightHandPoints.swift */; };
 		5070016A27D8269F008ACB9C /* RoboticArtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070016927D8269F008ACB9C /* RoboticArtApp.swift */; };
 		5070016C27D8269F008ACB9C /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070016B27D8269F008ACB9C /* PianoView.swift */; };
 		5070016E27D826A0008ACB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5070016D27D826A0008ACB9C /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		506F0DA427EC229600683FAE /* LeftHandPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHandPoints.swift; sourceTree = "<group>"; };
+		506F0DA627EC22A100683FAE /* RightHandPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHandPoints.swift; sourceTree = "<group>"; };
 		5070016627D8269F008ACB9C /* RoboticArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoboticArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5070016927D8269F008ACB9C /* RoboticArtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoboticArtApp.swift; sourceTree = "<group>"; };
 		5070016B27D8269F008ACB9C /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 				50C3617327DD401B00E42B29 /* BlackPianoKeyView.swift */,
 				50C3617727DE9F1500E42B29 /* CameraFeedView.swift */,
 				50F7232127EA9EED008EF973 /* MIDISongCell.swift */,
+				506F0DA427EC229600683FAE /* LeftHandPoints.swift */,
+				506F0DA627EC22A100683FAE /* RightHandPoints.swift */,
 			);
 			path = "Helper Views";
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C3617027DD2BB800E42B29 /* NoteType.swift in Sources */,
+				506F0DA527EC229600683FAE /* LeftHandPoints.swift in Sources */,
 				50C3615B27DD17A800E42B29 /* SplashScreenView.swift in Sources */,
 				50C3616127DD196700E42B29 /* InformationView.swift in Sources */,
 				50F7232627EAA8C6008EF973 /* String.swift in Sources */,
@@ -314,6 +321,7 @@
 				50F7233F27EAF0F6008EF973 /* TappableDemo.swift in Sources */,
 				50C3616E27DD295400E42B29 /* View.swift in Sources */,
 				50DA49E027EBE4EF00FA8EAA /* CGPoint.swift in Sources */,
+				506F0DA727EC22A100683FAE /* RightHandPoints.swift in Sources */,
 				50C3617F27DEA2C500E42B29 /* FrameManager.swift in Sources */,
 				50F7232427EA9F01008EF973 /* Song.swift in Sources */,
 				50C3616327DD199A00E42B29 /* ChooseModeView.swift in Sources */,

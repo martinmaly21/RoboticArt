@@ -8,7 +8,7 @@
 import SwiftUI
  
 struct RootView: View {
-    @State private var currentView: CurrentView = .splashScreen
+    @State private var currentView: CurrentView = .machineVisionMode
     
     var body: some View {
         VStack(alignment: .center) {
