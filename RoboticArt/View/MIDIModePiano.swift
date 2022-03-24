@@ -50,208 +50,220 @@ struct MIDIModePiano: View {
     func sweetButPsycho() async {
         await playNote(noteType: .off, for: 0.5)
 
-        // oh  -
-        await playNote(noteType: .c4, for: 0.72)
+        // oh  - c
+        await playNote(noteType: .c4, for: 0.32)
         await playNote(noteType: .off, for: 0.08)
         // shes - c
-        await playNote(noteType: .c4, for: 0.72)
+        await playNote(noteType: .c4, for: 0.32)
         await playNote(noteType: .off, for: 0.08)
         // sweet - c
-        await playNote(noteType: .c4, for: 0.4)
+        await playNote(noteType: .c4, for: 0.2)
         // but - b
-        await playNote(noteType: .b2, for: 0.4)
+        await playNote(noteType: .b2, for: 0.2)
         // a - c
-        await playNote(noteType: .c4, for: 0.8)
+        await playNote(noteType: .c4, for: 0.4)
         // psy - b
-        await playNote(noteType: .b2, for: 0.8)
+        await playNote(noteType: .b2, for: 0.4)
         // cho - g
-        await playNote(noteType: .g2, for: 0.32)
-        await playNote(noteType: .off, for: 0.08)
+        await playNote(noteType: .g2, for: 0.15)
+        await playNote(noteType: .off, for: 0.05)
         // a - g
-        await playNote(noteType: .g2, for: 0.32)
-        await playNote(noteType: .off, for: 0.08)
+        await playNote(noteType: .g2, for: 0.15)
+        await playNote(noteType: .off, for: 0.05)
         // lit - g
-        await playNote(noteType: .g2, for: 0.32)
-        await playNote(noteType: .off, for: 0.08)
+        await playNote(noteType: .g2, for: 0.15)
+        await playNote(noteType: .off, for: 0.05)
         // tle - a
-        await playNote(noteType: .a2, for: 0.4)
+        await playNote(noteType: .a2, for: 0.2)
         // bit - b
-        await playNote(noteType: .b2, for: 0.8)
+        await playNote(noteType: .b2, for: 0.4)
         // psy - c4
-        await playNote(noteType: .c4, for: 0.8)
+        await playNote(noteType: .c4, for: 0.4)
         // cho - a
-        await playNote(noteType: .a2, for: 0.32)
-        await playNote(noteType: .off, for: 0.08)
+        await playNote(noteType: .a2, for: 0.15)
+        await playNote(noteType: .off, for: 0.05)
         // at - a
-        await playNote(noteType: .a2, for: 0.32)
-        await playNote(noteType: .off, for: 0.08)
+        await playNote(noteType: .a2, for: 0.15)
+        await playNote(noteType: .off, for: 0.05)
         // night - b
-        await playNote(noteType: .b2, for: 0.4)
+        await playNote(noteType: .b2, for: 0.2)
         // shes - a
-        await playNote(noteType: .a2, for: 0.4)
+        await playNote(noteType: .a2, for: 0.2)
         // scream - b
-        await playNote(noteType: .b2, for: 0.4)
+        await playNote(noteType: .b2, for: 0.2)
         // in - a
-        await playNote(noteType: .a2, for: 0.4)
+        await playNote(noteType: .a2, for: 0.2)
         // im - e
-        await playNote(noteType: .e2, for: 0.4)
+        await playNote(noteType: .e2, for: 0.2)
         // ma - b
-        await playNote(noteType: .b2, for: 0.32)
-        await playNote(noteType: .off, for: 0.08)
+        await playNote(noteType: .b2, for: 0.15)
+        await playNote(noteType: .off, for: 0.05)
         // ma - b
-        await playNote(noteType: .b2, for: 0.72)
-        await playNote(noteType: .off, for: 0.08)
+        await playNote(noteType: .b2, for: 0.15)
+        await playNote(noteType: .off, for: 0.05)
         // out - b
-        await playNote(noteType: .b2, for: 0.4)
+        await playNote(noteType: .b2, for: 0.2)
         // my - a
-        await playNote(noteType: .a2, for: 0.32)
-        await playNote(noteType: .off, for: 0.08)
+        await playNote(noteType: .a2, for: 0.15)
+        await playNote(noteType: .off, for: 0.05)
         // mind - a
-        await playNote(noteType: .g2, for: 0.4)
+        await playNote(noteType: .g2, for: 0.2)
         // __ - g
-        await playNote(noteType: .g2, for: 0.4)
+        await playNote(noteType: .g2, for: 0.2)
 
 
         await playNote(noteType: .off, for: 0.03)
     }
     
     func drunkenSailor() async {
-        await playNote(noteType: .off, for: 0.5)
+    await playNote(noteType: .off, for: 0.5)
 
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.25)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.d1,.f1], for: 0.2)
+    await playNote(noteType: [.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d1,.f1], for: 0.1)
+    await playNote(noteType: [.d1,.f1], for: 0.1)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d1,.f1], for: 0.1)
+    await playNote(noteType: [.d1,.f1], for: 0.1)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.25)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.d1,.f1], for: 0.2)
+    await playNote(noteType: [.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d1,.f1], for: 0.1)
+    await playNote(noteType: [.d1,.f1], for: 0.1)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
 
-        // bar2
+    // bar2
 
-        await playNote(noteType: .off, for: 0.1)
+    await playNote(noteType: .off, for: 0.1)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.25)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.d1,.f1], for: 0.2)
+    await playNote(noteType: [.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.d2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.f2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.f2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
 
-        // bar 3
+    // bar 3
 
-        await playNote(noteType: [.g2,.d1,.f1], for: 0.25)
+    await playNote(noteType: [.g2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.d1,.f1], for: 0.2)
+    await playNote(noteType: [.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.g2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.g2,.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d1,.f1], for: 0.1)
+    await playNote(noteType: [.d1,.f1], for: 0.1)
 
-        await playNote(noteType: [.g2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.g2,.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d1,.f1], for: 0.1)
+    await playNote(noteType: [.d1,.f1], for: 0.1)
 
-        await playNote(noteType: [.g2,.d1,.f1], for: 0.25)
+    await playNote(noteType: [.g2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.d1,.f1], for: 0.2)
+    await playNote(noteType: [.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.g2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.g2,.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d1,.f1], for: 0.1)
+    await playNote(noteType: [.d1,.f1], for: 0.1)
 
-        await playNote(noteType: [.g2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.g2,.d1,.f1], for: 0.2)
 
-        // bar4
+    // bar4
 
-        await playNote(noteType: .off, for: 0.1)
+    await playNote(noteType: .off, for: 0.1)
 
-        await playNote(noteType: [.g2,.d1,.f1], for: 0.25)
+    await playNote(noteType: [.g2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.d1,.f1], for: 0.2)
+    await playNote(noteType: [.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.d2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.f2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.f2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
 
-        // bar5
+    // bar5
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.25)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.d1,.f1], for: 0.2)
+    await playNote(noteType: [.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d1,.f1], for: 0.1)
+    await playNote(noteType: [.d1,.f1], for: 0.1)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d1,.f1], for: 0.1)
+    await playNote(noteType: [.d1,.f1], for: 0.1)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.25)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.d1,.f1], for: 0.2)
+    await playNote(noteType: [.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
 
-        await playNote(noteType: [.d1,.f1], for: 0.1)
+    await playNote(noteType: [.d1,.f1], for: 0.1)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.2)
 
-        // bar6
+    // bar6
 
-        await playNote(noteType: .off, for: 0.1)
+    await playNote(noteType: .off, for: 0.1)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.25)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.d1,.f1], for: 0.1)
+    await playNote(noteType: [.d1,.f1], for: 0.1)
 
-        await playNote(noteType: [.b2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.b2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.b2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.b2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.c4,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.c4,.d1,.f1], for: 0.4)
 
-        // bar 7
+    // bar 7
 
-        await playNote(noteType: [.off], for: 0.1)
+    await playNote(noteType: [.off], for: 0.1)
 
-        await playNote(noteType: [.c4,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.c4,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.a2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.g2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.g2,.d1,.f1], for: 0.4)
 
-        await playNote(noteType: [.e2,.d1,.f1], for: 0.3)
+    await playNote(noteType: [.e2,.d1,.f1], for: 0.4)
 
-        // bar 8
+    // bar 8
 
-        await playNote(noteType: [.off], for: 0.2)
+    await playNote(noteType: [.off], for: 0.2)
 
-        await playNote(noteType: [.d2,.d1,.f1], for: 0.4)
+    await playNote(noteType: [.d2,.d1,.f1], for: 0.5)
 
-        await playNote(noteType: [.off], for: 0.2)
+    await playNote(noteType: [.off], for: 0.2)
 
-        await playNote(noteType: [.d2,.d1,.f1], for: 0.4)
+    await playNote(noteType: [.d2,.d1,.f1], for: 0.5)
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
     
