@@ -35,7 +35,6 @@ struct MachineVisionModeView: View {
                         .padding(.leading, -20)
                 }
                 .padding([.top, .bottom], 8)
-                .background(.thinMaterial)
                 .cornerRadius(8)
                 .onTapGesture {
                     withAnimation {
