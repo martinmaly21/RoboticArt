@@ -10,6 +10,8 @@ import SwiftUI
 struct SplashScreenView: View {
     @Binding var currentView: CurrentView
     
+    @State private var hasPlayedGlissando = false
+    
     var body: some View {
         HStack {
             VStack(alignment: .center, spacing: 25) {
@@ -32,6 +34,15 @@ struct SplashScreenView: View {
                     animationDuration: 1
                 )
                     .onTapGesture {
+                        guard hasPlayedGlissando else {
+                            hasPlayedGlissando.toggle()
+                            Task {
+                                await glissando()
+                            }
+                            
+                            return
+                        }
+                        
                         withAnimation {
                             currentView = .information
                         }
@@ -44,4 +55,54 @@ struct SplashScreenView: View {
         
         Spacer()
     }
+    
+    func glissando() async {
+        let timeForEachNote = 0.1
+        
+        //up
+        await playNote(noteType: .c1, for: timeForEachNote)
+        await playNote(noteType: .d1, for: timeForEachNote)
+        await playNote(noteType: .e1, for: timeForEachNote)
+        await playNote(noteType: .f1, for: timeForEachNote)
+        await playNote(noteType: .g1, for: timeForEachNote)
+        await playNote(noteType: .a1, for: timeForEachNote)
+        await playNote(noteType: .b1, for: timeForEachNote)
+        await playNote(noteType: .c2, for: timeForEachNote)
+        
+        await playNote(noteType: .c3, for: timeForEachNote)
+        await playNote(noteType: .d2, for: timeForEachNote)
+        await playNote(noteType: .e2, for: timeForEachNote)
+        await playNote(noteType: .f2, for: timeForEachNote)
+        await playNote(noteType: .g2, for: timeForEachNote)
+        await playNote(noteType: .a2, for: timeForEachNote)
+        await playNote(noteType: .b2, for: timeForEachNote)
+        await playNote(noteType: .c4, for: timeForEachNote)
+        
+        //down
+        await playNote(noteType: .c4, for: timeForEachNote)
+        await playNote(noteType: .b2, for: timeForEachNote)
+        await playNote(noteType: .a2, for: timeForEachNote)
+        await playNote(noteType: .g2, for: timeForEachNote)
+        await playNote(noteType: .f2, for: timeForEachNote)
+        await playNote(noteType: .e2, for: timeForEachNote)
+        await playNote(noteType: .d2, for: timeForEachNote)
+        await playNote(noteType: .c3, for: timeForEachNote)
+        
+        await playNote(noteType: .c2, for: timeForEachNote)
+        await playNote(noteType: .b1, for: timeForEachNote)
+        await playNote(noteType: .a1, for: timeForEachNote)
+        await playNote(noteType: .g1, for: timeForEachNote)
+        await playNote(noteType: .f1, for: timeForEachNote)
+        await playNote(noteType: .e1, for: timeForEachNote)
+        await playNote(noteType: .d1, for: timeForEachNote)
+        await playNote(noteType: .c1, for: timeForEachNote)
+        
+        await playNote(noteType: .off, for: timeForEachNote)
+    }
+    
+    func playNote(noteType: NoteType, for seconds: Double) async {
+        serialPortViewModel.sendData(noteType.binaryNote)
+        await Task.sleep(seconds: seconds)
+    }
+    
 }
