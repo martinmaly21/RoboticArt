@@ -27,6 +27,8 @@ struct MIDIModePiano: View {
         switch song.name {
         case "Drunken Sailor":
             await drunkenSailor()
+        case "Superman":
+            await superman()
         case "Twinkle Twinkle Little Star":
             await twinkleTwinkleLittleStar()
         case "Mary had a little lamb":
@@ -49,6 +51,123 @@ struct MIDIModePiano: View {
         withAnimation {
             currentView = .chooseSong
         }
+    }
+    
+    func superman() async {
+        await playNote(noteType: .off, for: 0.5)
+
+        // c
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // g
+        await playNote(noteType: .g2, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+
+        // g
+        await playNote(noteType: .g2, for: 0.5)
+        // a
+        await playNote(noteType: .a2, for: 0.5)
+        // g
+        await playNote(noteType: .g2, for: 0.5)
+        // f
+        await playNote(noteType: .f2, for: 0.5)
+        // c
+        await playNote(noteType: .c3, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+ 
+        // c
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // g
+        await playNote(noteType: .g2, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+
+        // g
+        await playNote(noteType: .g2, for: 0.5)
+        // a
+        await playNote(noteType: .a2, for: 0.5)
+        // g
+        await playNote(noteType: .g2, for: 0.5)
+        // f
+        await playNote(noteType: .f2, for: 0.5)
+        // a
+        await playNote(noteType: .a2, for: 0.5)
+        // g
+        await playNote(noteType: .g2, for: 0.5)
+
+        // c
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // b
+        await playNote(noteType: .b2, for: 0.5)
+        // g
+        await playNote(noteType: .g2, for: 0.5)
+
+        // c
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.2)
+        await playNote(noteType: .off, for: 0.1)
+        // b
+        await playNote(noteType: .b2, for: 0.5)
+        // g
+        await playNote(noteType: .g2, for: 0.5)
+
+        // c
+        await playNote(noteType: .c3, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+        // b
+        await playNote(noteType: .b2, for: 0.5)
+        // a
+        await playNote(noteType: .a2, for: 0.5)
+        // b
+        await playNote(noteType: .b2, for: 0.5)
+        // c
+        await playNote(noteType: .c3, for: 0.5)
+
+
+        // c
+        await playNote(noteType: .c3, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.4)
+        await playNote(noteType: .off, for: 0.1)
+        // c
+        await playNote(noteType: .c3, for: 0.5)
+        await playNote(noteType: .off, for: 0.1)
+
+
+
+
+
+
+
+
     }
     
     func rowRowYourBoat() async {
