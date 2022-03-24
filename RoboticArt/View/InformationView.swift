@@ -26,7 +26,7 @@ struct InformationView: View {
                 
                 CirclePulseButton(
                     color: .mint,
-                    text: "👌 to continue",
+                    text: "Continue",
                     buttonDimension: 250,
                     numberOfOuterCircles: 15,
                     animationDuration: 1

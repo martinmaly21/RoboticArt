@@ -42,7 +42,7 @@ class SerialPortViewModel: NSObject, ObservableObject {
         let indices = string.indices(of: "1").map { string.distance(from: string.startIndex, to: $0)}
         
         guard indices.count <= 4 else {
-            fatalError("Attempting to send too many keys to ed")
+            return
         }
         
         var currentNotes: [NoteType] = []
@@ -56,7 +56,7 @@ class SerialPortViewModel: NSObject, ObservableObject {
             return
         }
         
-        //port.send("\(string)\n".data(using: .utf8)!)
+        port.send("\(string)\n".data(using: .utf8)!)
         
         DispatchQueue.main.async {
             self.currentPlayedNotes = currentNotes

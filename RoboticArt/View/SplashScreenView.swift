@@ -30,7 +30,7 @@ struct SplashScreenView: View {
                 
                 CirclePulseButton(
                     color: .mint,
-                    text: "👌 to begin",
+                    text: "Begin",
                     buttonDimension: 250,
                     numberOfOuterCircles: 15,
                     animationDuration: 1
