@@ -13,7 +13,7 @@ struct TappableDemo: View {
     @Binding var currentView: CurrentView
     
     var body: some View {
-        PianoView(title: "Try clicking on the keys to play ed")
+        PianoView(title: "Try clicking on the keys to play Edbot!")
             .onAppear {
                 Task {
                     

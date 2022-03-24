@@ -56,7 +56,7 @@ class SerialPortViewModel: NSObject, ObservableObject {
             return
         }
         
-        port.send("\(string)\n".data(using: .utf8)!)
+        //port.send("\(string)\n".data(using: .utf8)!)
         
         DispatchQueue.main.async {
             self.currentPlayedNotes = currentNotes

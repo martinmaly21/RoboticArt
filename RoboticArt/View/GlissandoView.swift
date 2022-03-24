@@ -25,7 +25,7 @@ struct GlissandoView: View {
                 Spacer()
                     .frame(height: 100)
                 
-                Text("Tap to glissando")
+                Text("Tap to glissando!")
                     .frame(width: 200, height: 100)
                     .font(.system(size: 25))
                     .background(.thickMaterial)

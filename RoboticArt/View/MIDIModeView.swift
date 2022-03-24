@@ -27,21 +27,15 @@ struct MIDIModeView: View {
         ),
         
         Song(
+            name: "Mary Had a Little Lamb",
+            artist: "Nursery Rhyme",
+            image: NSImage(named: "lamb")!
+        ),
+        
+        Song(
             name: "Superman",
             artist: "John Williams",
             image: NSImage(named: "superman")!
-        ),
-        
-        Song(
-            name: "Jingle Bells",
-            artist: "Nursery Rhyme",
-            image: NSImage(named: "JingleBells")!
-        ),
-        
-        Song(
-            name: "Mary had a little lamb",
-            artist: "Mary",
-            image: NSImage(named: "lamb")!
         ),
         
         Song(
@@ -51,17 +45,17 @@ struct MIDIModeView: View {
         ),
         
         Song(
-            name: "Row row your boat",
-            artist: "Rower",
-            image: NSImage(named: "psycho")!
+            name: "Jingle Bells",
+            artist: "Santa",
+            image: NSImage(named: "JingleBells")!
         ),
-    
+
+        
         Song(
-            name: "Levels (intro)",
-            artist: "Avicii",
-            image: NSImage(named: "Levels")!
+            name: "Row Row Your Boat",
+            artist: "Nursery Rhyme",
+            image: NSImage(named: "boat")!
         ),
-    
     ]
     
     var body: some View {
@@ -91,20 +85,23 @@ struct MIDIModeView: View {
                 .bold()
                 .padding(40)
             
-            ForEach(
-                songs,
-                id: \.self,
-                content: { song in
-                    MIDISongCell(song: song)
-                        .onTapGesture {
-                            Task {
-                                withAnimation {
-                                    currentView = .midiModePiano(song: song)
+            ScrollView {
+                ForEach(
+                    songs,
+                    id: \.self,
+                    content: { song in
+                        MIDISongCell(song: song)
+                            .onTapGesture {
+                                Task {
+                                    withAnimation {
+                                        currentView = .midiModePiano(song: song)
+                                    }
                                 }
                             }
-                        }
-                }
-            )
+                    }
+                )
+            }
+            
             
             Spacer()
         }

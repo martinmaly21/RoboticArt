@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SplashScreenView: View {
+    @EnvironmentObject var serialPortViewModel: SerialPortViewModel
+    
     @Binding var currentView: CurrentView
     
     @State private var hasPlayedGlissando = false
