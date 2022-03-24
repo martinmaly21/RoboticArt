@@ -45,6 +45,27 @@ struct MachineVisionModeView: View {
                 Spacer()
             }
         }
+        .onChange(
+            of: machineVisionViewModel.leftIndexFingerLocations,
+            perform: { _ in
+                
+                guard let tip =  machineVisionViewModel.leftIndexFingerLocations?.first?.y,
+                      let bottom = machineVisionViewModel.leftIndexFingerLocations?.last?.y else {
+                          return
+                      }
+                
+                if tip > bottom {
+                    
+                    print("clicked index")
+                }
+            }
+        )
+//        .onChange(
+//            of: machineVisionViewModel.rightIndexFingerLocations,
+//            perform: { _ in
+//
+//            }
+//        )
         .environmentObject(machineVisionViewModel)
     }
 }

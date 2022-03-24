@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		506F0DA527EC229600683FAE /* LeftHandPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F0DA427EC229600683FAE /* LeftHandPoints.swift */; };
 		506F0DA727EC22A100683FAE /* RightHandPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F0DA627EC22A100683FAE /* RightHandPoints.swift */; };
+		506F0DA927EC32D900683FAE /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506F0DA827EC32D900683FAE /* Collection.swift */; };
 		5070016A27D8269F008ACB9C /* RoboticArtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070016927D8269F008ACB9C /* RoboticArtApp.swift */; };
 		5070016C27D8269F008ACB9C /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5070016B27D8269F008ACB9C /* PianoView.swift */; };
 		5070016E27D826A0008ACB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5070016D27D826A0008ACB9C /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		506F0DA427EC229600683FAE /* LeftHandPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHandPoints.swift; sourceTree = "<group>"; };
 		506F0DA627EC22A100683FAE /* RightHandPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHandPoints.swift; sourceTree = "<group>"; };
+		506F0DA827EC32D900683FAE /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		5070016627D8269F008ACB9C /* RoboticArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoboticArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5070016927D8269F008ACB9C /* RoboticArtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoboticArtApp.swift; sourceTree = "<group>"; };
 		5070016B27D8269F008ACB9C /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				50F26B5D27E9752300453FF7 /* Task.swift */,
 				50F7232527EAA8C6008EF973 /* String.swift */,
 				50DA49DF27EBE4EF00FA8EAA /* CGPoint.swift */,
+				506F0DA827EC32D900683FAE /* Collection.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				50F7232927EAB66C008EF973 /* MIDIModePiano.swift in Sources */,
 				50C3618327DEA3A800E42B29 /* CGImage.swift in Sources */,
 				50C3616B27DD277A00E42B29 /* WhitePianoKeyView.swift in Sources */,
+				506F0DA927EC32D900683FAE /* Collection.swift in Sources */,
 				50F7233D27EAEE0E008EF973 /* GlissandoView.swift in Sources */,
 				50F7233F27EAF0F6008EF973 /* TappableDemo.swift in Sources */,
 				50C3616E27DD295400E42B29 /* View.swift in Sources */,
