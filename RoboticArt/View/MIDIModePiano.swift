@@ -15,12 +15,20 @@ struct MIDIModePiano: View {
     let song: Song
     
     var body: some View {
-        PianoView(title: "\(song.name) by \(song.artist)")
-            .onAppear {
-                Task {
-                    await playSong()
+        ZStack {
+            Image(nsImage: song.image)
+                .resizable()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .cornerRadius(20)
+            
+            PianoView(title: "\(song.name): \(song.artist)")
+                .onAppear {
+                    Task {
+                        await playSong()
+                    }
                 }
-            }
+        }
+        
     }
     
     func playSong() async {
@@ -31,7 +39,7 @@ struct MIDIModePiano: View {
             await superman()
         case "Twinkle Twinkle Little Star":
             await twinkleTwinkleLittleStar()
-        case "Mary had a little lamb":
+        case "Mary Had a Little Lamb":
             await maryHadALittleLamb()
         case "Sweet but Psycho":
             await sweetButPsycho()
@@ -39,7 +47,7 @@ struct MIDIModePiano: View {
             await levels()
         case "Jingle Bells":
             await jingleBells()
-        case "Row row your boat":
+        case "Row Row Your Boat":
             await rowRowYourBoat()
         default:
             fatalError()

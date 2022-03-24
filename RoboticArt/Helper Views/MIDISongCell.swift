@@ -17,7 +17,7 @@ struct MIDISongCell: View {
             )
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 300, height: 120, alignment: .top)
+                .frame(width: 300, height: 120, alignment: .center)
                 .padding(.trailing, 12)
             
             VStack(alignment: .leading) {
