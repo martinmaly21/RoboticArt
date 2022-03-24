@@ -35,6 +35,10 @@ struct MIDIModePiano: View {
             await sweetButPsycho()
         case "Levels (intro)":
             await levels()
+        case "Jingle Bells":
+            await jingleBells()
+        case "Row row your boat":
+            await rowRowYourBoat()
         default:
             fatalError()
         }
@@ -45,6 +49,48 @@ struct MIDIModePiano: View {
         withAnimation {
             currentView = .chooseSong
         }
+    }
+    
+    func rowRowYourBoat() async {
+    var noteLength: Double
+    
+    noteLength = 0.3
+    
+    var offLength: Double
+    
+    offLength = 0.03
+    
+    
+    var song = [(NoteType, Double)]()
+    
+    song = [
+      (.c3,noteLength),(.off,offLength),(.c3,noteLength),(.off,offLength),(.c3,noteLength),(.d2,noteLength),(.e2,noteLength),
+      
+      (.e2,noteLength),(.d2,noteLength),(.e2,noteLength), (.f2,noteLength),(.g2,noteLength),
+      
+      
+      
+       (.c3,noteLength),(.off,offLength),(.c3,noteLength),(.off,offLength),(.c3,noteLength),(.g2,noteLength),(.off,offLength),(.g2,noteLength),(.off,offLength),(.g2,noteLength),
+       
+       
+       
+       (.e2,noteLength),(.off,offLength),(.e2,noteLength),(.off,offLength),(.e2,noteLength),(.c3,noteLength),(.off,offLength),(.c3,noteLength),(.off,offLength),(.c3,noteLength),
+       
+       
+       
+       
+      (.g2,noteLength),(.f2,noteLength),(.e2,noteLength),(.d2,noteLength),(.c3,noteLength),
+        
+        
+        
+         
+        
+    ]
+    
+    for note in song{
+        await playNote(noteType: note.0, for: note.1)
+    }
+    
     }
     
     func sweetButPsycho() async {
@@ -191,8 +237,8 @@ struct MIDIModePiano: View {
 
     await playNote(noteType: [.f2,.d1,.f1], for: 0.4)
 
-    await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
-
+    await playNote(noteType: [.a2,.d1,.f1], for: 0.35)
+    await playNote(noteType: .off, for: 0.05)
     // bar5
 
     await playNote(noteType: [.a2,.d1,.f1], for: 0.4)
@@ -225,7 +271,8 @@ struct MIDIModePiano: View {
 
     await playNote(noteType: [.d1,.f1], for: 0.1)
 
-    await playNote(noteType: [.b2,.d1,.f1], for: 0.4)
+    await playNote(noteType: [.b2,.d1,.f1], for: 0.35)
+    await playNote(noteType: .off, for: 0.05)
 
     await playNote(noteType: [.b2,.d1,.f1], for: 0.4)
 
@@ -252,18 +299,6 @@ struct MIDIModePiano: View {
     await playNote(noteType: [.off], for: 0.2)
 
     await playNote(noteType: [.d2,.d1,.f1], for: 0.5)
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
     
@@ -476,91 +511,51 @@ struct MIDIModePiano: View {
     }
     
     func jingleBells() async {
-        let noteLength = 0.2
-        let offLength = 0.03
+        var noteLength: Double
         
-        let song: [(NoteType, Double)] = [
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,2*noteLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,2*noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.g2,noteLength),
-            (.c2,noteLength),
-            (.d2,noteLength),
-            (.e2,4*noteLength),
-            (.f2,noteLength),
-            (.off,offLength),
-            (.f2,noteLength),
-            (.off,offLength),
-            (.f2,noteLength),
-            (.off,offLength),
-            (.f2,noteLength),
-            (.off,offLength),
-            (.f2,noteLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.e2,noteLength),
-            (.d2,noteLength),
-            (.off,offLength),
-            (.d2,noteLength),
-            (.e2,noteLength),
-            (.d2,2*noteLength),
-            (.g2,2*noteLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,2*noteLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,2*noteLength),
-            (.e2,noteLength),
-            (.g2,noteLength),
-            (.c2,noteLength),
-            (.d2,noteLength),
-            (.e2,4*noteLength),
-            (.f2,noteLength),
-            (.off,offLength),
-            (.f2,noteLength),
-            (.off,offLength),
-            (.f2,noteLength),
-            (.off,offLength),
-            (.f2,noteLength),
-            (.off,offLength),
-            (.f2,noteLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.off,offLength),
-            (.e2,noteLength),
-            (.g2,noteLength),
-            (.off,offLength),
-            (.g2,noteLength),
-            (.f2,noteLength),
-            (.d2,noteLength),
-            (.c2,noteLength),
+        noteLength = 0.3
+        
+        var offLength: Double
+        
+        offLength = 0.15
+        
+        
+        var song = [(NoteType, Double)]()
+        
+        song = [
+            (.e2,noteLength),(.off,offLength),(.e2,noteLength),(.off,offLength),(.e2,2*noteLength),(.off,offLength),
+            
+            (.e2,noteLength),(.off,offLength),(.e2,noteLength),(.off,offLength),(.e2,2*noteLength), (.off,offLength),
+            
+            
+            (.e2,noteLength),(.off,offLength),(.g2,noteLength),(.off,offLength),(.c3,noteLength),(.off,offLength),(.d2,noteLength),(.off,offLength), (.e2,4*noteLength),
+            
+            
+            (.f2,noteLength),(.off,offLength),(.f2,noteLength),(.off,offLength),(.f2,noteLength),(.off,offLength),(.f2,noteLength),(.off,offLength),(.f2,noteLength),
+            (.e2,noteLength),(.off,offLength),(.e2,noteLength),(.off,offLength),(.e2,0.5*noteLength),(.off,offLength),(.e2,0.5*noteLength),
+            
+            
+            
+            (.e2,noteLength),(.d2,noteLength),(.off,offLength),(.d2,noteLength),(.e2,noteLength),(.d2,2*noteLength),(.g2,2*noteLength),
+            
+            
+            (.e2,noteLength),(.off,offLength),(.e2,noteLength),(.off,offLength),(.e2,2*noteLength),(.off,offLength),
+            (.e2,noteLength),(.off,offLength),(.e2,noteLength),(.off,offLength),(.e2,2*noteLength),(.off,offLength),
+            (.e2,noteLength),   (.g2,noteLength),(.c3,noteLength),
+            (.d2,noteLength), (.e2,4*noteLength),
+            
+            (.f2,noteLength),(.off,offLength),(.f2,noteLength),(.off,offLength),(.f2,noteLength),(.off,offLength),(.f2,noteLength),(.off,offLength),(.f2,noteLength),
+            (.e2,noteLength),(.off,offLength),(.e2,noteLength),(.off,offLength),(.e2,0.5*noteLength),(.off,offLength),(.e2,0.5*noteLength),
+            
+            (.g2,noteLength),(.off,offLength),(.g2,noteLength), (.f2,noteLength),(.d2,noteLength),(.c3,noteLength),
+            
+
         ]
         
         for note in song{
             await playNote(noteType: note.0, for: note.1)
         }
+        
     }
     
     func levels() async {

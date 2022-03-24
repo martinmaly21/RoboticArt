@@ -27,6 +27,12 @@ struct MIDIModeView: View {
         ),
         
         Song(
+            name: "Jingle Bells",
+            artist: "Nursery Rhyme",
+            image: NSImage(named: "JingleBells")!
+        ),
+        
+        Song(
             name: "Mary had a little lamb",
             artist: "Mary",
             image: NSImage(named: "lamb")!
@@ -35,6 +41,12 @@ struct MIDIModeView: View {
         Song(
             name: "Sweet but Psycho",
             artist: "Ava Max",
+            image: NSImage(named: "psycho")!
+        ),
+        
+        Song(
+            name: "Row row your boat",
+            artist: "Rower",
             image: NSImage(named: "psycho")!
         ),
     
