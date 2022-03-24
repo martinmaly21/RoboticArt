@@ -50,6 +50,12 @@ class SerialPortViewModel: NSObject, ObservableObject {
             currentNotes.append(NoteType.allCases[index])
         }
         
+        //don't bother sending to hardware if there have been no changes
+        //especially useful for machine vision component
+        guard currentNotes != currentPlayedNotes else {
+            return
+        }
+        
         port.send("\(string)\n".data(using: .utf8)!)
         
         DispatchQueue.main.async {

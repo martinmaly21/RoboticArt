@@ -46,26 +46,39 @@ struct MachineVisionModeView: View {
             }
         }
         .onChange(
-            of: machineVisionViewModel.leftIndexFingerLocations,
+            of: machineVisionViewModel.frame,
             perform: { _ in
+                var notesToPlay = [NoteType]()
                 
-                guard let tip =  machineVisionViewModel.leftIndexFingerLocations?.first?.y,
-                      let bottom = machineVisionViewModel.leftIndexFingerLocations?.last?.y else {
-                          return
-                      }
-                
-                if tip > bottom {
+                //left index
+                if let tip =  machineVisionViewModel.leftIndexFingerLocations?.first,
+                   let bottom = machineVisionViewModel.leftIndexFingerLocations?.last {
                     
-                    print("clicked index")
+                    //AND tip is over any key, then add that key to notesToPlay
+                    if tip.y > bottom.y  {
+                        notesToPlay.append(getNote(for: tip))
+                    }
                 }
+                
+                playNote(noteType: notesToPlay)
             }
         )
-//        .onChange(
-//            of: machineVisionViewModel.rightIndexFingerLocations,
-//            perform: { _ in
-//
-//            }
-//        )
         .environmentObject(machineVisionViewModel)
+    }
+    
+    func getNote(for point: CGPoint) -> NoteType {
+        
+        return NoteType.d1
+    }
+    
+    func playNote(noteType: [NoteType]) {
+        let convertedBinary: [UInt16] = noteType.compactMap { UInt16($0.binaryNote, radix: 2) }
+        
+        var intermediateResult: UInt16 = 0
+        convertedBinary.forEach { intermediateResult = intermediateResult | $0 }
+        
+        let currentNote = String(intermediateResult, radix: 2).pad(toSize: 16)
+        
+        serialPortViewModel.sendData(currentNote)
     }
 }

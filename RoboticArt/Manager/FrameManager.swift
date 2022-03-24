@@ -53,8 +53,6 @@ extension FrameManager: AVCaptureVideoDataOutputSampleBufferDelegate {
     ) {
         if let buffer = sampleBuffer.imageBuffer {
             DispatchQueue.main.async {
-                let imaghe = CIImage(cvImageBuffer: buffer)
-                print("Fuck: \(imaghe.extent)")
                 self.current = buffer
             }
         }
@@ -135,6 +133,12 @@ extension FrameManager: AVCaptureVideoDataOutputSampleBufferDelegate {
                     CGPoint(x: 1 - little2.location.x, y: 1 - little2.location.y),
                     CGPoint(x: 1 - little3.location.x, y: 1 - little3.location.y),
                 ]
+            } else {
+                leftThumbFingerLocations = nil
+                leftIndexFingerLocations = nil
+                leftMiddleFingerLocations = nil
+                leftRingFingerLocations = nil
+                leftLittleFingerLocations = nil
             }
             
             if let leftHandObservation = handPoseRequest.results?.last {
@@ -205,6 +209,12 @@ extension FrameManager: AVCaptureVideoDataOutputSampleBufferDelegate {
                     CGPoint(x: 1 - little2.location.x, y: 1 - little2.location.y),
                     CGPoint(x: 1 - little3.location.x, y: 1 - little3.location.y),
                 ]
+            } else {
+                rightThumbFingerLocations = nil
+                rightIndexFingerLocations = nil
+                rightMiddleFingerLocations = nil
+                rightRingFingerLocations = nil
+                rightLittleFingerLocations = nil
             }
         } catch {
             fatalError()
